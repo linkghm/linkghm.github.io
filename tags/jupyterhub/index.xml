@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyterhub on Linkghm</title>
+    <link>http://linkghm.github.io/tags/jupyterhub/</link>
+    <description>Recent content in jupyterhub on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/jupyterhub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker安装Jupyterhub</title>
+      <link>http://linkghm.github.io/p/docker-install-jupyterhub/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/docker-install-jupyterhub/</guid>
+      <description>1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
+mkdir -p /opt/jupyterhub/home
+2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
+4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
+6 添加用户 useradd jupyterhub
+passwd jupyterhub
+7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态
+8 进入Jupyterhub localhost:8000</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arch on Linkghm</title>
+    <link>http://linkghm.github.io/tags/arch/</link>
+    <description>Recent content in arch on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deepin-wechat无法发送图</title>
+      <link>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</guid>
+      <description>Github Issue：https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42
+具体解决办法（摘自Issue，作为个人记录）：
+yay -S deepin-wine5sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMDWINE_CMD=&amp;quot;wine&amp;quot; --&amp;gt; WINE_CMD=&amp;quot;deepin-wine5&amp;quot; (具体修改地方)kill wine以及wechat进程，重启wechat即可</description>
+    </item>
+    
+    <item>
+      <title>ArchLinux下Electron-ssr启动问题</title>
+      <link>http://linkghm.github.io/p/archlinux-electron-ssr/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/archlinux-electron-ssr/</guid>
+      <description>1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
+/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
+Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux
+2 原因分析： cat /usr/bin/electron-ssr
+#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
+3 具体解决办法： sudo vim /usr/bin/electron-ssr
+#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
+#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 </description>
+    </item>
+    
+  </channel>
+</rss>

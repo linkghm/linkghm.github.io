@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>frp on Linkghm</title>
+    <link>http://linkghm.github.io/tags/frp/</link>
+    <description>Recent content in frp on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/frp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>frp的使用</title>
+      <link>http://linkghm.github.io/p/frp/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/frp/</guid>
+      <description>1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
+frp项目地址：https://github.com/fatedier/frp
+2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
+3 无stcp： Server： frps.ini
+[common]bind_port = 7000 # Client和Server通信的端口run the server:.</description>
+    </item>
+    
+  </channel>
+</rss>

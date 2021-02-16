@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>study on Linkghm</title>
+    <link>http://linkghm.github.io/categories/study/</link>
+    <description>Recent content in study on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/categories/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vscode &#43; docker in the local environment</title>
+      <link>http://linkghm.github.io/p/vscode-with-docker/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/vscode-with-docker/</guid>
+      <description>由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。
+但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。
+1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo docker hub：https://hub.docker.com/r/ufoym/deepo
+github：https://www.github.com/ufoym/deepo
+提示：可以将docker的服务开机启动。
+2 运行容器请参考官方文档 3 容器创建后，正常是需要sudo权限进行操作，但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务，如下所示： connect EACCES /var/run/docker.sock
+4 docker官方针对这个情况有具体的解决步骤： https://docs.docker.com/engine/install/linux-postinstall/
+ sudo groupadd dockersudo usermod -aG docker $USERnewgrp docker （linux下，刷新上述的更新；稳妥起见可以重启一下电脑）5 打开terminal，测试 docker run hello-world
+如果可以正常启动服务，说明已经将当前用户添加到了docker组
+6 打开vscode，可以看到左侧docker插件中已经显示出运行的容器了。右键attach vscode就可以在vscode中打开容器环境进行操作。 附：目前发现的一个问题是，打开容器后cpu的占用率非常高，但是还不知道怎么解决。</description>
+    </item>
+    
+    <item>
+      <title>Find pi without the monitor</title>
+      <link>http://linkghm.github.io/p/find-pi-without-monitor/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/find-pi-without-monitor/</guid>
+      <description>本文仅作个人记录，如有不同请Google。
+前提：树莓派安装在局域网内
+1 安装nmap yay -S nmap
+2 查看当前主机的ip ip addr
+3 得到局域网的ip网段 e.g. 192.168.X.X
+4 使用nmap找到树莓派 nmap -sP 192.168.X.0/22
+5 ssh连接树莓派（我的名字是ubuntu） ssh ubuntu@192.168.X.Y</description>
+    </item>
+    
+    <item>
+      <title>Deepin-wechat无法发送图</title>
+      <link>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</link>
+      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</guid>
+      <description>Github Issue：https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42
+具体解决办法（摘自Issue，作为个人记录）：
+yay -S deepin-wine5sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMDWINE_CMD=&amp;quot;wine&amp;quot; --&amp;gt; WINE_CMD=&amp;quot;deepin-wine5&amp;quot; (具体修改地方)kill wine以及wechat进程，重启wechat即可</description>
+    </item>
+    
+    <item>
+      <title>ArchLinux下Electron-ssr启动问题</title>
+      <link>http://linkghm.github.io/p/archlinux-electron-ssr/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/archlinux-electron-ssr/</guid>
+      <description>1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
+/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
+Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux
+2 原因分析： cat /usr/bin/electron-ssr
+#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
+3 具体解决办法： sudo vim /usr/bin/electron-ssr
+#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
+#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 </description>
+    </item>
+    
+    <item>
+      <title>Vim复制粘贴到寄存器</title>
+      <link>http://linkghm.github.io/p/vim-clipboard-problem/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/vim-clipboard-problem/</guid>
+      <description>1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
+2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard+clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
+sudo vim /etc/vimrc
+在最下边加入
+set clipboard=unnamedplus
+关于unnamed和unnamedplus，可以参考 StackOverFlow
+2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。 输入:reg可以看到复制下来的内容。</description>
+    </item>
+    
+    <item>
+      <title>frp的使用</title>
+      <link>http://linkghm.github.io/p/frp/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/frp/</guid>
+      <description>1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
+frp项目地址：https://github.com/fatedier/frp
+2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
+3 无stcp： Server： frps.ini
+[common]bind_port = 7000 # Client和Server通信的端口run the server:.</description>
+    </item>
+    
+    <item>
+      <title>git push取消密码</title>
+      <link>http://linkghm.github.io/p/git-push-cancel-password/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/git-push-cancel-password/</guid>
+      <description>在进行git push的时候，总是会提示输入github帐号和密码。
+原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。
+具体解决办法：
+1 在当前工程保存帐号密码： vim .git-credentials
+https://{username}:{password}@github.com
+git config --global credential.helper store
+2 直接修改当前工程.git的配置 前提是已经将本地的public key保存在了github
+vim .git/config
+[remote &amp;quot;origin&amp;quot;]url = 这里粘贴github上的ssh链接</description>
+    </item>
+    
+    <item>
+      <title>Linux终端代理</title>
+      <link>http://linkghm.github.io/p/linux-proxy/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/linux-proxy/</guid>
+      <description>主要针对yay安装或者更新包，其余情况可以使用proxychains。
+终端结束，代理结束
+http 代理：
+export http=http://127.0.0.1:1080 export https=http://127.0.0.1:1080
+socket 代理：
+export http_proxy=socks5://127.0.0.1:1080 export https_proxy=socks5://127.0.0.1:1080</description>
+    </item>
+    
+    <item>
+      <title>Docker安装Jupyterhub</title>
+      <link>http://linkghm.github.io/p/docker-install-jupyterhub/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/docker-install-jupyterhub/</guid>
+      <description>1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
+mkdir -p /opt/jupyterhub/home
+2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
+4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
+6 添加用户 useradd jupyterhub
+passwd jupyterhub
+7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态
+8 进入Jupyterhub localhost:8000</description>
+    </item>
+    
+    <item>
+      <title>计划读书清单</title>
+      <link>http://linkghm.github.io/p/book-plan/</link>
+      <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/book-plan/</guid>
+      <description>计算机基础：  计算机系统&amp;mdash;《深入理解计算机系统》 算法&amp;mdash;《算法导论》 数据结构&amp;mdash;《数据结构-清华大学C》 Python&amp;mdash;《Python学习手册》 机器学习&amp;mdash;《Python机器学习》 操作系统&amp;mdash;《现代操作系统》 数据库&amp;mdash;《数据库系统基础教程》 C&amp;mdash;《The C Programming Language》 图像处理&amp;mdash;《数字图象处理》  数学基础：  线性代数 概率论 离散数学 数值分析  进阶：  深度学习框架 C++&amp;mdash;《C++ Primer》 计算机网络&amp;mdash;《tip/tcp》  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Linkghm</title>
+    <link>http://linkghm.github.io/tags/git/</link>
+    <description>Recent content in git on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git push取消密码</title>
+      <link>http://linkghm.github.io/p/git-push-cancel-password/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/git-push-cancel-password/</guid>
+      <description>在进行git push的时候，总是会提示输入github帐号和密码。
+原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。
+具体解决办法：
+1 在当前工程保存帐号密码： vim .git-credentials
+https://{username}:{password}@github.com
+git config --global credential.helper store
+2 直接修改当前工程.git的配置 前提是已经将本地的public key保存在了github
+vim .git/config
+[remote &amp;quot;origin&amp;quot;]url = 这里粘贴github上的ssh链接</description>
+    </item>
+    
+  </channel>
+</rss>

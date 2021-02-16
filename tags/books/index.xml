@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>books on Linkghm</title>
+    <link>http://linkghm.github.io/tags/books/</link>
+    <description>Recent content in books on Linkghm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Sep 2018 23:51:15 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计划读书清单</title>
+      <link>http://linkghm.github.io/p/book-plan/</link>
+      <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
+      
+      <guid>http://linkghm.github.io/p/book-plan/</guid>
+      <description>计算机基础：  计算机系统&amp;mdash;《深入理解计算机系统》 算法&amp;mdash;《算法导论》 数据结构&amp;mdash;《数据结构-清华大学C》 Python&amp;mdash;《Python学习手册》 机器学习&amp;mdash;《Python机器学习》 操作系统&amp;mdash;《现代操作系统》 数据库&amp;mdash;《数据库系统基础教程》 C&amp;mdash;《The C Programming Language》 图像处理&amp;mdash;《数字图象处理》  数学基础：  线性代数 概率论 离散数学 数值分析  进阶：  深度学习框架 C++&amp;mdash;《C++ Primer》 计算机网络&amp;mdash;《tip/tcp》  </description>
+    </item>
+    
+  </channel>
+</rss>

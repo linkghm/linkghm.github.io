@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
+frp项目地址：https://github.com/fatedier/frp
+2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
+3 无stcp： Server： frps.ini
+[common]bind_port = 7000 # Client和Server通信的端口run the server:.'><title>frp的使用</title>
+
+<link rel='canonical' href='http://linkghm.github.io/p/frp/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='frp的使用'>
+<meta property='og:description' content='1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
+frp项目地址：https://github.com/fatedier/frp
+2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
+3 无stcp： Server： frps.ini
+[common]bind_port = 7000 # Client和Server通信的端口run the server:.'>
+<meta property='og:url' content='http://linkghm.github.io/p/frp/'>
+<meta property='og:site_name' content='Linkghm'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='frp' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2020-07-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-07-21T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="frp的使用">
+<meta name="twitter:description" content="1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
+frp项目地址：https://github.com/fatedier/frp
+2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
+3 无stcp： Server： frps.ini
+[common]bind_port = 7000 # Client和Server通信的端口run the server:.">
+    <link rel="shortcut icon" href="static/favicon.svg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/me_hu5f3449ec5d7be9506f961545915a5b2a_124253_300x0_resize_q75_box.jpg" width="300"
+                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🥱</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="http://linkghm.github.io/">Linkghm</a></h1>
+        <h2 class="site-description">Keep studying ...</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="http://linkghm.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/study/" >
+                study
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/frp/">frp的使用</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jul 21, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h3 id="1-what-is-frp-摘自项目readme">1 What is frp? （摘自项目README）</h3>
+<p>frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.</p>
+<p>frp项目地址：<a class="link" href="https://github.com/fatedier/frp"  target="_blank" rel="noopener"
+    >https://github.com/fatedier/frp</a></p>
+<h3 id="2-注本文是基于linux的配置">2 注：本文是基于linux的配置</h3>
+<p>release: <a class="link" href="https://github.com/fatedier/frp/releases"  target="_blank" rel="noopener"
+    >https://github.com/fatedier/frp/releases</a></p>
+<h3 id="3-无stcp">3 无stcp：</h3>
+<p><strong>Server：</strong>
+<em>frps.ini</em></p>
+<pre><code>[common]
+bind_port = 7000 # Client和Server通信的端口
+run the server:
+./frps -c ./frps.ini
+Client：
+frpc.ini配置
+[common]
+server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+server_port = 7000 # Client和Server通信的端口
+[tcp_port]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 6006 # Client服务的端口
+remote_port = 6006 # Server暴露的端口
+</code></pre><p><strong>run the Client:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h3 id="4-有stcp">4 有stcp：</h3>
+<p>具体逻辑：Client端1–&gt;frps–&gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。</p>
+<h4 id="41">4.1</h4>
+<p><strong>Server：</strong>
+<em>frps.ini</em></p>
+<pre><code>[common]
+bind_port = 7000
+</code></pre><p><strong>run the server:</strong> <code>./frps -c ./frps.ini</code></p>
+<h4 id="42">4.2</h4>
+<p><strong>Client1：</strong>
+<em>frpc.ini</em></p>
+<pre><code>[common]
+server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+server_port = 7000
+[secret_tcp]
+# If the type is secret tcp, remote_port is useless
+# Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
+type = stcp
+# sk used for authentication for visitors
+sk = abcdefg # sk要和Client2相同
+local_ip = 127.0.0.1 # Client1的访问地址
+local_port = 6006 # Client1的访问端口
+use_encryption = false
+use_compression = false
+</code></pre><p><strong>run the Client1:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h4 id="43">4.3</h4>
+<p><strong>Client2：</strong>
+<em>frpc.ini</em></p>
+<pre><code>[common]
+server_addr = aaa.bbb.ccc.ddd
+server_port = 7000
+# user of frpc should be same in both stcp server and stcp visitor
+[secret_tcp_visitor]
+# frpc role visitor -&gt; frps -&gt; frpc role server
+role = visitor
+type = stcp
+# the server name you want to visitor
+server_name = secret_tcp
+sk = abcdefg # sk要和Client1相同
+# connect this address to visitor stcp server
+bind_addr = 127.0.0.1 # Client2的访问地址
+bind_port = 6006 # Client2的访问端口
+use_encryption = false
+use_compression = false
+</code></pre><p><strong>run the Client2:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h3 id="5-其他小的细节">5 其他小的细节</h3>
+<h4 id="51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置">5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：</h4>
+<p><code>login to server failed: dial tcp no route to host</code></p>
+<p>解决办法：</p>
+<pre><code>firewall-cmd --state (出现running，表示在运行)
+systemctl stop firewalld.service
+</code></pre><h4 id="52-防火墙的相关命令">5.2 防火墙的相关命令</h4>
+<pre><code>启动：# systemctl start  firewalld
+查看状态：# systemctl status firewalld 或者 firewall-cmd –state
+停止：# systemctl disable firewalld
+禁用：# systemctl stop firewalld
+重启：#systemctl restart firewalld
+永久的开放需要的端口
+sudo firewall-cmd --zone=public --add-port=7000/tcp --permanent
+sudo firewall-cmd --reload //重载生效刚才的端口设置
+</code></pre><h3 id="6-最后友情提示">6 最后友情提示：</h3>
+<p>注意端口安全，防范风险，避免不必要的麻烦 🙂</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/frp/">frp</a>
+        
+            <a href="/tags/linux/">linux</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/deepin-wechat-sending-images-problem/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Deepin-wechat无法发送图</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/archlinux-electron-ssr/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ArchLinux下Electron-ssr启动问题</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/linux-proxy/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux终端代理</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/vscode-with-docker/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vscode &#43; docker in the local environment</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/find-pi-without-monitor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find pi without the monitor</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2018 - 
+        
+        2021 Linkghm
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
