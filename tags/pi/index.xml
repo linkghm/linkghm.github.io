@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PI on Linkghm</title>
-    <link>http://linkghm.github.io/tags/pi/</link>
+    <link>https://guohuimin.top/tags/pi/</link>
     <description>Recent content in PI on Linkghm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find pi without the monitor</title>
-      <link>http://linkghm.github.io/p/find-pi-without-monitor/</link>
+      <link>https://guohuimin.top/p/find-pi-without-monitor/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://linkghm.github.io/p/find-pi-without-monitor/</guid>
+      <guid>https://guohuimin.top/p/find-pi-without-monitor/</guid>
       <description>本文仅作个人记录，如有不同请Google。
 前提：树莓派安装在局域网内
 1 安装nmap yay -S nmap

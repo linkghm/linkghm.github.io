@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vim on Linkghm</title>
-    <link>http://linkghm.github.io/tags/vim/</link>
+    <link>https://guohuimin.top/tags/vim/</link>
     <description>Recent content in vim on Linkghm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim复制粘贴到寄存器</title>
-      <link>http://linkghm.github.io/p/vim-clipboard-problem/</link>
+      <link>https://guohuimin.top/p/vim-clipboard-problem/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://linkghm.github.io/p/vim-clipboard-problem/</guid>
+      <guid>https://guohuimin.top/p/vim-clipboard-problem/</guid>
       <description>1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
 2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard+clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
 sudo vim /etc/vimrc

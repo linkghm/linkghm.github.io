@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linkghm</title>
-        <link>http://linkghm.github.io/</link>
+        <link>https://guohuimin.top/</link>
         <description>Recent content on Linkghm</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>2020年度总结</title>
-        <link>http://linkghm.github.io/p/2021/</link>
+        <link>https://guohuimin.top/p/2021/</link>
         <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/2021/</guid>
-        <description>&lt;img src="http://linkghm.github.io/p/2021/wallhaven-73mzme.jpg" alt="Featured image of post 2020年度总结" /&gt;&lt;p&gt;转眼之间就来到了2021，凌晨宿舍写笔记的时候，习惯性把上一条时间戳复制了下来，突然发现已经是2021了，那一刻内心才有了一丝触动。&lt;/p&gt;
+        <guid>https://guohuimin.top/p/2021/</guid>
+        <description>&lt;img src="https://guohuimin.top/p/2021/wallhaven-73mzme.jpg" alt="Featured image of post 2020年度总结" /&gt;&lt;p&gt;转眼之间就来到了2021，凌晨宿舍写笔记的时候，习惯性把上一条时间戳复制了下来，突然发现已经是2021了，那一刻内心才有了一丝触动。&lt;/p&gt;
 &lt;p&gt;可能是最近一段时间总熬夜，感觉自己的情感上变得比较迟钝，有时候也会很焦虑。跨年的朋友圈总是那么热闹，但是内心却怎么也高兴不起来。没有什么特别的烦恼，只是情绪很难被周围欢快的氛围调动起来。31号下午看到了博士的拟录取结果，用家人的话说也算是完美的收官。想想自己过去一年的生活，经历了很多，但仿佛也是一瞬间的事情。说起来惭愧，研究生三年只有2019年年初的时候，写了一个简单的总结，当时充满了对未来生活的无限激情，再看看现在的自己顿时觉得好失败[哭笑]。&lt;/p&gt;
 &lt;p&gt;不管如何，逝去的时光无法追回，还是要打起精神继续干活，下面把自己过去一年的生活做个&lt;del&gt;综述&lt;/del&gt;流水账，既算是总结也是对自己的反思。&lt;/p&gt;
 &lt;p&gt;2019.12 -2020.2 这段时间忙着处理医院的数据，虽然拿到了原始数据，但是没有经过清洗，根本没有办法看。快过年的时候，整个学校基本上没有什么学生了，也只剩下研究生博士生苦逼的在干活，实验室的暖气根本难以维持室内的温度，坐在工位上时间久了双脚冰冰凉。从2019年10月份到年末，好在是谷同学不负众望拿下了博士入场券，加上数据到位，自己的心情还是比较好的。但接下来就是自己的下一步发展方向，虽然自己是一个极度逃避现实的人，等到现实摆在眼前还是得硬着头皮上。&lt;/p&gt;
@@ -26,10 +26,10 @@
         </item>
         <item>
         <title>vscode &#43; docker in the local environment</title>
-        <link>http://linkghm.github.io/p/vscode-with-docker/</link>
+        <link>https://guohuimin.top/p/vscode-with-docker/</link>
         <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/vscode-with-docker/</guid>
+        <guid>https://guohuimin.top/p/vscode-with-docker/</guid>
         <description>&lt;p&gt;由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。&lt;/p&gt;
 &lt;p&gt;但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。&lt;/p&gt;
 &lt;h3 id=&#34;1-首先是安装容器这里推荐的深度学习的容器为ufoymdeepo&#34;&gt;1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo&lt;/h3&gt;
@@ -58,10 +58,10 @@
         </item>
         <item>
         <title>Find pi without the monitor</title>
-        <link>http://linkghm.github.io/p/find-pi-without-monitor/</link>
+        <link>https://guohuimin.top/p/find-pi-without-monitor/</link>
         <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/find-pi-without-monitor/</guid>
+        <guid>https://guohuimin.top/p/find-pi-without-monitor/</guid>
         <description>&lt;p&gt;本文仅作个人记录，如有不同请Google。&lt;/p&gt;
 &lt;p&gt;前提：树莓派安装在局域网内&lt;/p&gt;
 &lt;h3 id=&#34;1-安装nmap&#34;&gt;1 安装nmap&lt;/h3&gt;
@@ -78,10 +78,10 @@
         </item>
         <item>
         <title>Deepin-wechat无法发送图</title>
-        <link>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</link>
+        <link>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/deepin-wechat-sending-images-problem/</guid>
+        <guid>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</guid>
         <description>&lt;p&gt;Github Issue：&lt;a class=&#34;link&#34; href=&#34;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;具体解决办法（摘自Issue，作为个人记录）：&lt;/p&gt;
@@ -93,10 +93,10 @@ kill wine以及wechat进程，重启wechat即可
         </item>
         <item>
         <title>ArchLinux下Electron-ssr启动问题</title>
-        <link>http://linkghm.github.io/p/archlinux-electron-ssr/</link>
+        <link>https://guohuimin.top/p/archlinux-electron-ssr/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/archlinux-electron-ssr/</guid>
+        <guid>https://guohuimin.top/p/archlinux-electron-ssr/</guid>
         <description>&lt;h3 id=&#34;1-问题再现&#34;&gt;1 问题再现：&lt;/h3&gt;
 &lt;p&gt;最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/usr/bin/electron-ssr
@@ -120,10 +120,10 @@ exec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;
         </item>
         <item>
         <title>Vim复制粘贴到寄存器</title>
-        <link>http://linkghm.github.io/p/vim-clipboard-problem/</link>
+        <link>https://guohuimin.top/p/vim-clipboard-problem/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/vim-clipboard-problem/</guid>
+        <guid>https://guohuimin.top/p/vim-clipboard-problem/</guid>
         <description>&lt;h3 id=&#34;1-首先确认自己使用的vim版本&#34;&gt;1 首先确认自己使用的vim版本：&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;vim --version | grep clipboard
 -clipboard         +jumplist          +popupwin          +user_commands
@@ -149,10 +149,10 @@ yay -S gvim # 安装gvim
         </item>
         <item>
         <title>frp的使用</title>
-        <link>http://linkghm.github.io/p/frp/</link>
+        <link>https://guohuimin.top/p/frp/</link>
         <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/frp/</guid>
+        <guid>https://guohuimin.top/p/frp/</guid>
         <description>&lt;h3 id=&#34;1-what-is-frp-摘自项目readme&#34;&gt;1 What is frp? （摘自项目README）&lt;/h3&gt;
 &lt;p&gt;frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.&lt;/p&gt;
 &lt;p&gt;frp项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -244,10 +244,10 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </item>
         <item>
         <title>git push取消密码</title>
-        <link>http://linkghm.github.io/p/git-push-cancel-password/</link>
+        <link>https://guohuimin.top/p/git-push-cancel-password/</link>
         <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/git-push-cancel-password/</guid>
+        <guid>https://guohuimin.top/p/git-push-cancel-password/</guid>
         <description>&lt;p&gt;在进行git push的时候，总是会提示输入github帐号和密码。&lt;/p&gt;
 &lt;p&gt;原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。&lt;/p&gt;
 &lt;p&gt;具体解决办法：&lt;/p&gt;
@@ -264,10 +264,10 @@ url = 这里粘贴github上的ssh链接
         </item>
         <item>
         <title>Linux终端代理</title>
-        <link>http://linkghm.github.io/p/linux-proxy/</link>
+        <link>https://guohuimin.top/p/linux-proxy/</link>
         <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/linux-proxy/</guid>
+        <guid>https://guohuimin.top/p/linux-proxy/</guid>
         <description>&lt;p&gt;主要针对yay安装或者更新包，其余情况可以使用proxychains。&lt;/p&gt;
 &lt;p&gt;终端结束，代理结束&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;http 代理：&lt;/strong&gt;&lt;/p&gt;
@@ -280,10 +280,10 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         </item>
         <item>
         <title>Docker安装Jupyterhub</title>
-        <link>http://linkghm.github.io/p/docker-install-jupyterhub/</link>
+        <link>https://guohuimin.top/p/docker-install-jupyterhub/</link>
         <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/docker-install-jupyterhub/</guid>
+        <guid>https://guohuimin.top/p/docker-install-jupyterhub/</guid>
         <description>&lt;h3 id=&#34;1-新建volume映射文件夹&#34;&gt;1 新建volume映射文件夹&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/jupyterhub&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/home&lt;/code&gt;&lt;/p&gt;
@@ -304,21 +304,21 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         </item>
         <item>
         <title>2020</title>
-        <link>http://linkghm.github.io/p/2020/</link>
+        <link>https://guohuimin.top/p/2020/</link>
         <pubDate>Tue, 03 Mar 2020 14:32:36 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/2020/</guid>
-        <description>&lt;img src="http://linkghm.github.io/p/2020/campus.jpg" alt="Featured image of post 2020" /&gt;&lt;p&gt;挑战 机遇 努力&lt;/p&gt;
+        <guid>https://guohuimin.top/p/2020/</guid>
+        <description>&lt;img src="https://guohuimin.top/p/2020/campus.jpg" alt="Featured image of post 2020" /&gt;&lt;p&gt;挑战 机遇 努力&lt;/p&gt;
 &lt;!-- ![NEU campus](campus.jpg) --&gt;
 &lt;p&gt;&lt;img src=&#34;campus.jpg&#34; width=&#34;700&#34; height=&#34;500&#34; alt=&#34;2020&#34; align=center /&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>power of knowledge</title>
-        <link>http://linkghm.github.io/p/power-of-knowledge/</link>
+        <link>https://guohuimin.top/p/power-of-knowledge/</link>
         <pubDate>Sat, 05 Jan 2019 01:23:07 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/power-of-knowledge/</guid>
+        <guid>https://guohuimin.top/p/power-of-knowledge/</guid>
         <description>&lt;h1 id=&#34;回顾&#34;&gt;回顾&lt;/h1&gt;
 &lt;p&gt;不知不觉2019年都来了，之前一直想记录下，奈何自己实在是太忙（懒），趁着晚上还有精神更新一波。&lt;/p&gt;
 &lt;p&gt;回顾2018年，自己经历了考研，毕业，异地以及现在忙碌的研究生生活。平时的课程上虽然做不到如鱼得水，但也是没有什么后悔，毕竟自己确实很上心地在学习了。&lt;/p&gt;
@@ -336,10 +336,10 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         </item>
         <item>
         <title>计划读书清单</title>
-        <link>http://linkghm.github.io/p/book-plan/</link>
+        <link>https://guohuimin.top/p/book-plan/</link>
         <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
         
-        <guid>http://linkghm.github.io/p/book-plan/</guid>
+        <guid>https://guohuimin.top/p/book-plan/</guid>
         <description>&lt;h1 id=&#34;计算机基础&#34;&gt;计算机基础：&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;计算机系统&amp;mdash;《深入理解计算机系统》&lt;/li&gt;

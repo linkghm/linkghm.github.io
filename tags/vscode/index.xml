@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vscode on Linkghm</title>
-    <link>http://linkghm.github.io/tags/vscode/</link>
+    <link>https://guohuimin.top/tags/vscode/</link>
     <description>Recent content in vscode on Linkghm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://linkghm.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vscode &#43; docker in the local environment</title>
-      <link>http://linkghm.github.io/p/vscode-with-docker/</link>
+      <link>https://guohuimin.top/p/vscode-with-docker/</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://linkghm.github.io/p/vscode-with-docker/</guid>
+      <guid>https://guohuimin.top/p/vscode-with-docker/</guid>
       <description>由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。
 但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。
 1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo docker hub：https://hub.docker.com/r/ufoym/deepo
