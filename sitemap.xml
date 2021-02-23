@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://guohuimin.top/archives/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+    <loc>https://guohuimin.top/p/conda-with-linux/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/categories/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://guohuimin.top/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/tags/linux/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/post/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/categories/study/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/tags/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://guohuimin.top/archives/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,11 +53,6 @@
   </url>
   
   <url>
-    <loc>https://guohuimin.top/categories/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://guohuimin.top/categories/life/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -38,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://guohuimin.top/post/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://guohuimin.top/tags/docker/</loc>
-    <lastmod>2020-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/categories/study/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -84,11 +94,6 @@
   
   <url>
     <loc>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/linux/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   

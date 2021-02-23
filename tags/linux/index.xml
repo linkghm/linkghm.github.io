@@ -6,7 +6,27 @@
     <description>Recent content in linux on Linkghm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anaconda&#43;Linux个人用户配置</title>
+      <link>https://guohuimin.top/p/conda-with-linux/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guohuimin.top/p/conda-with-linux/</guid>
+      <description>环境变量的种类 首先是linux下环境变量的种类：
+ /etc/profile /etc/environment ~/.bash_profile ~/.bashrc 1~2是全局变量，3~4是用户个人的变量  具体配置 个人用户配置方法如下： vim ~/.bashrc
+export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;
+刷新环境变量
+source .bashrc 
+检查是否起作用：
+conda
+清华源设置 清华源：(https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]
+后记 如果说，上述环境创建好后（base），再新创建一个虚拟环境。 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。 这是因为conda init会把bashrc之前的环境注释掉，只需要：
+  重新编辑.bashrc vim ~/.bashrc 
+  将下方的注释取消即可。
+  export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;</description>
+    </item>
+    
     <item>
       <title>Deepin-wechat无法发送图</title>
       <link>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</link>

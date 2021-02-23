@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
-/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
-Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 &#43;0000 x86_64 GNU/Linux
-2 原因分析： cat /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
-3 具体解决办法： sudo vim /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
-#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 '><title>ArchLinux下Electron-ssr启动问题</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='环境变量的种类 首先是linux下环境变量的种类：
+ /etc/profile /etc/environment ~/.bash_profile ~/.bashrc 1~2是全局变量，3~4是用户个人的变量  具体配置 个人用户配置方法如下： vim ~/.bashrc
+export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;
+刷新环境变量
+source .bashrc 
+检查是否起作用：
+conda
+清华源设置 清华源：(https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]
+后记 如果说，上述环境创建好后（base），再新创建一个虚拟环境。 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。 这是因为conda init会把bashrc之前的环境注释掉，只需要：
+  重新编辑.bashrc vim ~/.bashrc 
+  将下方的注释取消即可。
+  export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;'><title>Anaconda&#43;Linux个人用户配置</title>
 
-<link rel='canonical' href='https://guohuimin.top/p/archlinux-electron-ssr/'>
+<link rel='canonical' href='https://guohuimin.top/p/conda-with-linux/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='ArchLinux下Electron-ssr启动问题'>
-<meta property='og:description' content='1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
-/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
-Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 &#43;0000 x86_64 GNU/Linux
-2 原因分析： cat /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
-3 具体解决办法： sudo vim /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
-#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 '>
-<meta property='og:url' content='https://guohuimin.top/p/archlinux-electron-ssr/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Anaconda&#43;Linux个人用户配置'>
+<meta property='og:description' content='环境变量的种类 首先是linux下环境变量的种类：
+ /etc/profile /etc/environment ~/.bash_profile ~/.bashrc 1~2是全局变量，3~4是用户个人的变量  具体配置 个人用户配置方法如下： vim ~/.bashrc
+export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;
+刷新环境变量
+source .bashrc 
+检查是否起作用：
+conda
+清华源设置 清华源：(https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]
+后记 如果说，上述环境创建好后（base），再新创建一个虚拟环境。 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。 这是因为conda init会把bashrc之前的环境注释掉，只需要：
+  重新编辑.bashrc vim ~/.bashrc 
+  将下方的注释取消即可。
+  export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;'>
+<meta property='og:url' content='https://guohuimin.top/p/conda-with-linux/'>
 <meta property='og:site_name' content='Linkghm'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='arch' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2020-07-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-07-27T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="ArchLinux下Electron-ssr启动问题">
-<meta name="twitter:description" content="1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
-/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
-Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 &#43;0000 x86_64 GNU/Linux
-2 原因分析： cat /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
-3 具体解决办法： sudo vim /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
-#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2021-02-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-02-23T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Anaconda&#43;Linux个人用户配置">
+<meta name="twitter:description" content="环境变量的种类 首先是linux下环境变量的种类：
+ /etc/profile /etc/environment ~/.bash_profile ~/.bashrc 1~2是全局变量，3~4是用户个人的变量  具体配置 个人用户配置方法如下： vim ~/.bashrc
+export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;
+刷新环境变量
+source .bashrc 
+检查是否起作用：
+conda
+清华源设置 清华源：(https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]
+后记 如果说，上述环境创建好后（base），再新创建一个虚拟环境。 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。 这是因为conda init会把bashrc之前的环境注释掉，只需要：
+  重新编辑.bashrc vim ~/.bashrc 
+  将下方的注释取消即可。
+  export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;">
     <link rel="shortcut icon" href="static/favicon.svg" />
 
     </head>
@@ -219,7 +231,7 @@ Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 &#43;0000 
     
 
     <h2 class="article-title">
-        <a href="/p/archlinux-electron-ssr/">ArchLinux下Electron-ssr启动问题</a>
+        <a href="/p/conda-with-linux/">Anaconda&#43;Linux个人用户配置</a>
     </h2>
 
     <footer class="article-time">
@@ -231,30 +243,44 @@ Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 &#43;0000 
 
 
 
-        <time class="article-time--published">Jul 27, 2020</time>
+        <time class="article-time--published">Feb 23, 2021</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <h3 id="1-问题再现">1 问题再现：</h3>
-<p>最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。</p>
-<pre><code>/usr/bin/electron-ssr
-electron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory
-</code></pre><p>个人当前的系统信息如下：</p>
-<p>Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux</p>
-<h3 id="2-原因分析">2 原因分析：</h3>
-<p><code>cat /usr/bin/electron-ssr</code></p>
-<pre><code>#!/bin/bash
-exec electron4 /usr/share/electron-ssr/app.asar &quot;$@&quot;
-</code></pre><p>可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。</p>
-<h3 id="3-具体解决办法">3 具体解决办法：</h3>
-<p><code>sudo vim /usr/bin/electron-ssr</code></p>
-<pre><code>#!/bin/bash
-exec electron4 /usr/share/electron-ssr/app.asar &quot;$@&quot;
-</code></pre><p>更改为</p>
-<pre><code>#!/bin/bash
-exec electron /usr/share/electron-ssr/app.asar &quot;$@&quot;
-</code></pre><h3 id="4-重新启动即可">4 重新启动即可</h3>
+    <h3 id="环境变量的种类">环境变量的种类</h3>
+<p>首先是linux下环境变量的种类：</p>
+<ol>
+<li>/etc/profile</li>
+<li>/etc/environment</li>
+<li>~/.bash_profile</li>
+<li>~/.bashrc
+1~2是全局变量，3~4是用户个人的变量</li>
+</ol>
+<h3 id="具体配置">具体配置</h3>
+<p>个人用户配置方法如下：
+<code>vim ~/.bashrc</code></p>
+<p><code>export PATH=&quot;/opt/anaconda/bin:$PATH&quot;</code></p>
+<p>刷新环境变量</p>
+<p><code>source .bashrc </code></p>
+<p>检查是否起作用：</p>
+<p><code>conda</code></p>
+<h3 id="清华源设置">清华源设置</h3>
+<p>清华源：(<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)%5Bhttps://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%5D">https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]</a></p>
+<h3 id="后记">后记</h3>
+<p>如果说，上述环境创建好后（base），再新创建一个虚拟环境。
+conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。
+这是因为conda init会把bashrc之前的环境注释掉，只需要：</p>
+<ol>
+<li>
+<p>重新编辑.bashrc
+<code>vim ~/.bashrc </code></p>
+</li>
+<li>
+<p>将下方的注释取消即可。</p>
+</li>
+</ol>
+<p><code>export PATH=&quot;/opt/anaconda/bin:$PATH&quot;</code></p>
 
 </section>
 
@@ -262,8 +288,6 @@ exec electron /usr/share/electron-ssr/app.asar &quot;$@&quot;
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/arch/">arch</a>
         
             <a href="/tags/linux/">linux</a>
         
@@ -308,12 +332,12 @@ exec electron /usr/share/electron-ssr/app.asar &quot;$@&quot;
                 
                     
 <article class="">
-    <a href="/p/conda-with-linux/">
+    <a href="/p/archlinux-electron-ssr/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Anaconda&#43;Linux个人用户配置</h2>
+            <h2 class="article-title">ArchLinux下Electron-ssr启动问题</h2>
         </div>
     </a>
 </article>
