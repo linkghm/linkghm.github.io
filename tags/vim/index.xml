@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>vim on Linkghm</title>
-    <link>https://guohuimin.top/tags/vim/</link>
-    <description>Recent content in vim on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Vim复制粘贴到寄存器</title>
-      <link>https://guohuimin.top/p/vim-clipboard-problem/</link>
-      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/vim-clipboard-problem/</guid>
-      <description>1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
-2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard+clipboard +jumplist +popupwin +user_commands+ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
-sudo vim /etc/vimrc
-在最下边加入
-set clipboard=unnamedplus
-关于unnamed和unnamedplus，可以参考 StackOverFlow
-2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。 输入:reg可以看到复制下来的内容。</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Vim on Linkghm</title>
+        <link>https://guohuimin.top/tags/vim/</link>
+        <description>Recent content in Vim on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vim复制粘贴到寄存器</title>
+        <link>https://guohuimin.top/p/vim-clipboard-problem/</link>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/vim-clipboard-problem/</guid>
+        <description>&lt;h3 id=&#34;1-首先确认自己使用的vim版本&#34;&gt;1 首先确认自己使用的vim版本：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim --version | grep clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-clipboard         +jumplist          +popupwin          +user_commands
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。&lt;/p&gt;
+&lt;h3 id=&#34;2-解决办法&#34;&gt;2 解决办法：
+&lt;/h3&gt;&lt;h4 id=&#34;21-安装gvim&#34;&gt;2.1 安装gvim
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -R vim # 卸载原始的vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S gvim # 安装gvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;22-检查vim版本信息&#34;&gt;2.2 检查vim版本信息
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim --version | grep clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+clipboard         +jumplist          +popupwin          +user_commands
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim&#34;&gt;2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：
+&lt;/h4&gt;&lt;p&gt;这里是直接对vim的全局配置进行更改，个人用户更改请Google。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo vim /etc/vimrc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在最下边加入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;set clipboard=unnamedplus&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;关于unnamed和unnamedplus，可以参考 StackOverFlow&lt;/p&gt;
+&lt;h4 id=&#34;24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器&#34;&gt;2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。
+&lt;/h4&gt;&lt;p&gt;输入:reg可以看到复制下来的内容。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

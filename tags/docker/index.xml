@@ -1,45 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on Linkghm</title>
-    <link>https://guohuimin.top/tags/docker/</link>
-    <description>Recent content in docker on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vscode &#43; docker in the local environment</title>
-      <link>https://guohuimin.top/p/vscode-with-docker/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/vscode-with-docker/</guid>
-      <description>由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。
-但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。
-1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo docker hub：https://hub.docker.com/r/ufoym/deepo
-github：https://www.github.com/ufoym/deepo
-提示：可以将docker的服务开机启动。
-2 运行容器请参考官方文档 3 容器创建后，正常是需要sudo权限进行操作，但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务，如下所示： connect EACCES /var/run/docker.sock
-4 docker官方针对这个情况有具体的解决步骤： https://docs.docker.com/engine/install/linux-postinstall/
- sudo groupadd dockersudo usermod -aG docker $USERnewgrp docker （linux下，刷新上述的更新；稳妥起见可以重启一下电脑）5 打开terminal，测试 docker run hello-world
-如果可以正常启动服务，说明已经将当前用户添加到了docker组
-6 打开vscode，可以看到左侧docker插件中已经显示出运行的容器了。右键attach vscode就可以在vscode中打开容器环境进行操作。 附：目前发现的一个问题是，打开容器后cpu的占用率非常高，但是还不知道怎么解决。</description>
-    </item>
-    
-    <item>
-      <title>Docker安装Jupyterhub</title>
-      <link>https://guohuimin.top/p/docker-install-jupyterhub/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/docker-install-jupyterhub/</guid>
-      <description>1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
-mkdir -p /opt/jupyterhub/home
-2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
-4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
-6 添加用户 useradd jupyterhub
-passwd jupyterhub
-7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态
-8 进入Jupyterhub localhost:8000</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Docker on Linkghm</title>
+        <link>https://guohuimin.top/tags/docker/</link>
+        <description>Recent content in Docker on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>vscode &#43; docker in the local environment</title>
+        <link>https://guohuimin.top/p/vscode-with-docker/</link>
+        <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/vscode-with-docker/</guid>
+        <description>&lt;p&gt;由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。&lt;/p&gt;
+&lt;p&gt;但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。&lt;/p&gt;
+&lt;h3 id=&#34;1-首先是安装容器这里推荐的深度学习的容器为ufoymdeepo&#34;&gt;1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo
+&lt;/h3&gt;&lt;p&gt;docker hub：&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/ufoym/deepo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hub.docker.com/r/ufoym/deepo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;github：&lt;a class=&#34;link&#34; href=&#34;https://www.github.com/ufoym/deepo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.github.com/ufoym/deepo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提示：可以将docker的服务开机启动。&lt;/p&gt;
+&lt;h3 id=&#34;2-运行容器请参考官方文档&#34;&gt;2 运行容器请参考官方文档
+&lt;/h3&gt;&lt;h3 id=&#34;3-容器创建后正常是需要sudo权限进行操作但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务如下所示&#34;&gt;3 容器创建后，正常是需要sudo权限进行操作，但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务，如下所示：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;connect EACCES /var/run/docker.sock&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-docker官方针对这个情况有具体的解决步骤&#34;&gt;4 docker官方针对这个情况有具体的解决步骤：
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/linux-postinstall/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.docker.com/engine/install/linux-postinstall/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sudo groupadd docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sudo usermod -aG docker $USER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    newgrp docker （linux下，刷新上述的更新；稳妥起见可以重启一下电脑）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;5-打开terminal测试&#34;&gt;5 打开terminal，测试
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker run hello-world&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果可以正常启动服务，说明已经将当前用户添加到了docker组&lt;/p&gt;
+&lt;h3 id=&#34;6-打开vscode可以看到左侧docker插件中已经显示出运行的容器了右键attach-vscode就可以在vscode中打开容器环境进行操作&#34;&gt;6 打开vscode，可以看到左侧docker插件中已经显示出运行的容器了。右键attach vscode就可以在vscode中打开容器环境进行操作。
+&lt;/h3&gt;&lt;p&gt;附：目前发现的一个问题是，打开容器后cpu的占用率非常高，但是还不知道怎么解决。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Docker安装Jupyterhub</title>
+        <link>https://guohuimin.top/p/docker-install-jupyterhub/</link>
+        <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/docker-install-jupyterhub/</guid>
+        <description>&lt;h3 id=&#34;1-新建volume映射文件夹&#34;&gt;1 新建volume映射文件夹
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/jupyterhub&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/home&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-运行容器&#34;&gt;2 运行容器
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-登陆docker-容器&#34;&gt;3 登陆docker 容器
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker exec -it jupyterhub bash&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-安装notebook&#34;&gt;4 安装notebook
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-添加用户&#34;&gt;6 添加用户
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;useradd jupyterhub&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;passwd jupyterhub&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;7-退出交互界面-ctrl--p--q&#34;&gt;7 退出交互界面 （ctrl + p + q）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo docker ps -a 查看容器运行状态&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8-进入jupyterhub&#34;&gt;8 进入Jupyterhub
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;localhost:8000&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

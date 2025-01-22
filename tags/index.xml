@@ -1,110 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Linkghm</title>
-    <link>https://guohuimin.top/tags/</link>
-    <description>Recent content in Tags on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>linux</title>
-      <link>https://guohuimin.top/tags/linux/</link>
-      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://guohuimin.top/tags/life/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://guohuimin.top/tags/docker/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vscode</title>
-      <link>https://guohuimin.top/tags/vscode/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/vscode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PI</title>
-      <link>https://guohuimin.top/tags/pi/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>arch</title>
-      <link>https://guohuimin.top/tags/arch/</link>
-      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vim</title>
-      <link>https://guohuimin.top/tags/vim/</link>
-      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>frp</title>
-      <link>https://guohuimin.top/tags/frp/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/frp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://guohuimin.top/tags/git/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jupyterhub</title>
-      <link>https://guohuimin.top/tags/jupyterhub/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/jupyterhub/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>books</title>
-      <link>https://guohuimin.top/tags/books/</link>
-      <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/tags/books/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Tags on Linkghm</title>
+        <link>https://guohuimin.top/tags/</link>
+        <description>Recent content in Tags on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>linux</title>
+        <link>https://guohuimin.top/tags/linux/</link>
+        <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>life</title>
+        <link>https://guohuimin.top/tags/life/</link>
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/life/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://guohuimin.top/tags/docker/</link>
+        <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vscode</title>
+        <link>https://guohuimin.top/tags/vscode/</link>
+        <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/vscode/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PI</title>
+        <link>https://guohuimin.top/tags/pi/</link>
+        <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/pi/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>arch</title>
+        <link>https://guohuimin.top/tags/arch/</link>
+        <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/arch/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vim</title>
+        <link>https://guohuimin.top/tags/vim/</link>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/vim/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Frp</title>
+        <link>https://guohuimin.top/tags/frp/</link>
+        <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/frp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Git</title>
+        <link>https://guohuimin.top/tags/git/</link>
+        <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Jupyterhub</title>
+        <link>https://guohuimin.top/tags/jupyterhub/</link>
+        <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/jupyterhub/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Books</title>
+        <link>https://guohuimin.top/tags/books/</link>
+        <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/tags/books/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

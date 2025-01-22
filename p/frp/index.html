@@ -1,33 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
-frp项目地址：https://github.com/fatedier/frp
-2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
-3 无stcp： Server： frps.ini
-[common]bind_port = 7000 # Client和Server通信的端口run the server:.'><title>frp的使用</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.\nfrp项目地址：https://github.com/fatedier/frp\n2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases\n3 无stcp： Server： frps.ini\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 [common] bind_port = 7000 # Client和Server通信的端口 run the server: ./frps -c ./frps.ini Client： frpc.ini配置 [common] server_addr = aaa.bbb.ccc.ddd # Server的ip地址 server_port = 7000 # Client和Server通信的端口 [tcp_port] type = tcp local_ip = 127.0.0.1 local_port = 6006 # Client服务的端口 remote_port = 6006 # Server暴露的端口 run the Client: ./frpc -c ./frpc.ini\n">
+<title>frp的使用</title>
 
 <link rel='canonical' href='https://guohuimin.top/p/frp/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='frp的使用'>
-<meta property='og:description' content='1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
-frp项目地址：https://github.com/fatedier/frp
-2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
-3 无stcp： Server： frps.ini
-[common]bind_port = 7000 # Client和Server通信的端口run the server:.'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="frp的使用">
+<meta property='og:description' content="1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.\nfrp项目地址：https://github.com/fatedier/frp\n2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases\n3 无stcp： Server： frps.ini\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 [common] bind_port = 7000 # Client和Server通信的端口 run the server: ./frps -c ./frps.ini Client： frpc.ini配置 [common] server_addr = aaa.bbb.ccc.ddd # Server的ip地址 server_port = 7000 # Client和Server通信的端口 [tcp_port] type = tcp local_ip = 127.0.0.1 local_port = 6006 # Client服务的端口 remote_port = 6006 # Server暴露的端口 run the Client: ./frpc -c ./frpc.ini\n">
 <meta property='og:url' content='https://guohuimin.top/p/frp/'>
 <meta property='og:site_name' content='Linkghm'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='frp' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2020-07-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-07-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="frp的使用">
-<meta name="twitter:description" content="1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
-frp项目地址：https://github.com/fatedier/frp
-2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
-3 无stcp： Server： frps.ini
-[common]bind_port = 7000 # Client和Server通信的端口run the server:.">
-    <link rel="shortcut icon" href="static/favicon.svg" />
-
+<meta name="twitter:description" content="1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.\nfrp项目地址：https://github.com/fatedier/frp\n2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases\n3 无stcp： Server： frps.ini\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 [common] bind_port = 7000 # Client和Server通信的端口 run the server: ./frps -c ./frps.ini Client： frpc.ini配置 [common] server_addr = aaa.bbb.ccc.ddd # Server的ip地址 server_port = 7000 # Client和Server通信的端口 [tcp_port] type = tcp local_ip = 127.0.0.1 local_port = 6006 # Client服务的端口 remote_port = 6006 # Server暴露的端口 run the Client: ./frpc -c ./frpc.ini\n">
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -44,67 +33,75 @@ frp项目地址：https://github.com/fatedier/frp
         if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
 
-            document.body.dataset.scheme = 'dark';
+            document.documentElement.dataset.scheme = 'dark';
         } else {
-            document.body.dataset.scheme = 'light';
+            document.documentElement.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
+            
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/me_hu5f3449ec5d7be9506f961545915a5b2a_124253_300x0_resize_q75_box.jpg" width="300"
-                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/me_hu10152272165814587151.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
-                    <span class="emoji">🥱</span>
+                    <span class="emoji">☕</span>
                 
             </figure>
-        
-        <h1 class="site-name"><a href="https://guohuimin.top/">Linkghm</a></h1>
-        <h2 class="site-description">Keep studying ...</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
+            
         
         
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linkghm</a></h1>
+            <h2 class="site-description">Keep studying ...</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/linkghm'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                
-                <span>Home</span>
-            </a>
-        </li>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
-
+        
         <li >
-            <a href='/about'>
+            <a href='/about/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -120,9 +117,10 @@ frp项目地址：https://github.com/fatedier/frp
         </li>
         
         
-
         <li >
-            <a href='/archives'>
+            <a href='/archives/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -139,9 +137,10 @@ frp项目地址：https://github.com/fatedier/frp
         </li>
         
         
-
         <li >
-            <a href='/search'>
+            <a href='/search/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -156,10 +155,12 @@ frp项目地址：https://github.com/fatedier/frp
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -167,7 +168,7 @@ frp项目地址：https://github.com/fatedier/frp
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -175,26 +176,68 @@ frp项目地址：https://github.com/fatedier/frp
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://guohuimin.top/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
 </svg>
 
 
 
-            <span>Back</span>
-        </a>
-    </div>
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-what-is-frp-摘自项目readme">1 What is frp? （摘自项目README）</a></li>
+        <li><a href="#2-注本文是基于linux的配置">2 注：本文是基于linux的配置</a></li>
+        <li><a href="#3-无stcp">3 无stcp：</a></li>
+        <li><a href="#4-有stcp">4 有stcp：</a>
+          <ol>
+            <li><a href="#41">4.1</a></li>
+            <li><a href="#42">4.2</a></li>
+            <li><a href="#43">4.3</a></li>
+          </ol>
+        </li>
+        <li><a href="#5-其他小的细节">5 其他小的细节</a>
+          <ol>
+            <li><a href="#51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置">5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：</a></li>
+            <li><a href="#52-防火墙的相关命令">5.2 防火墙的相关命令</a></li>
+          </ol>
+        </li>
+        <li><a href="#6-最后友情提示">6 最后友情提示：</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
 
@@ -203,18 +246,43 @@ frp项目地址：https://github.com/fatedier/frp
     <header class="article-category">
         
             <a href="/categories/study/" >
-                study
+                Study
             </a>
         
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/frp/">frp的使用</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/frp/">frp的使用</a>
+        </h2>
+    
+        
+    </div>
 
+    
+    
+    
+    
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 21, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -222,98 +290,200 @@ frp项目地址：https://github.com/fatedier/frp
 
 
 
-        <time class="article-time--published">Jul 21, 2020</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
 </header>
 
     <section class="article-content">
-    <h3 id="1-what-is-frp-摘自项目readme">1 What is frp? （摘自项目README）</h3>
-<p>frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.</p>
+    
+    
+    <h3 id="1-what-is-frp-摘自项目readme">1 What is frp? （摘自项目README）
+</h3><p>frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.</p>
 <p>frp项目地址：<a class="link" href="https://github.com/fatedier/frp"  target="_blank" rel="noopener"
     >https://github.com/fatedier/frp</a></p>
-<h3 id="2-注本文是基于linux的配置">2 注：本文是基于linux的配置</h3>
-<p>release: <a class="link" href="https://github.com/fatedier/frp/releases"  target="_blank" rel="noopener"
+<h3 id="2-注本文是基于linux的配置">2 注：本文是基于linux的配置
+</h3><p>release: <a class="link" href="https://github.com/fatedier/frp/releases"  target="_blank" rel="noopener"
     >https://github.com/fatedier/frp/releases</a></p>
-<h3 id="3-无stcp">3 无stcp：</h3>
-<p><strong>Server：</strong>
+<h3 id="3-无stcp">3 无stcp：
+</h3><p><strong>Server：</strong>
 <em>frps.ini</em></p>
-<pre><code>[common]
-bind_port = 7000 # Client和Server通信的端口
-run the server:
-./frps -c ./frps.ini
-Client：
-frpc.ini配置
-[common]
-server_addr = aaa.bbb.ccc.ddd # Server的ip地址
-server_port = 7000 # Client和Server通信的端口
-[tcp_port]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 6006 # Client服务的端口
-remote_port = 6006 # Server暴露的端口
-</code></pre><p><strong>run the Client:</strong> <code>./frpc -c ./frpc.ini</code></p>
-<h3 id="4-有stcp">4 有stcp：</h3>
-<p>具体逻辑：Client端1–&gt;frps–&gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。</p>
-<h4 id="41">4.1</h4>
-<p><strong>Server：</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl">bind_port = 7000 # Client和Server通信的端口
+</span></span><span class="line"><span class="cl">run the server:
+</span></span><span class="line"><span class="cl">./frps -c ./frps.ini
+</span></span><span class="line"><span class="cl">Client：
+</span></span><span class="line"><span class="cl">frpc.ini配置
+</span></span><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl">server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+</span></span><span class="line"><span class="cl">server_port = 7000 # Client和Server通信的端口
+</span></span><span class="line"><span class="cl">[tcp_port]
+</span></span><span class="line"><span class="cl">type = tcp
+</span></span><span class="line"><span class="cl">local_ip = 127.0.0.1
+</span></span><span class="line"><span class="cl">local_port = 6006 # Client服务的端口
+</span></span><span class="line"><span class="cl">remote_port = 6006 # Server暴露的端口
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>run the Client:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h3 id="4-有stcp">4 有stcp：
+</h3><p>具体逻辑：Client端1–&gt;frps–&gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。</p>
+<h4 id="41">4.1
+</h4><p><strong>Server：</strong>
 <em>frps.ini</em></p>
-<pre><code>[common]
-bind_port = 7000
-</code></pre><p><strong>run the server:</strong> <code>./frps -c ./frps.ini</code></p>
-<h4 id="42">4.2</h4>
-<p><strong>Client1：</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl">bind_port = 7000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>run the server:</strong> <code>./frps -c ./frps.ini</code></p>
+<h4 id="42">4.2
+</h4><p><strong>Client1：</strong>
 <em>frpc.ini</em></p>
-<pre><code>[common]
-server_addr = aaa.bbb.ccc.ddd # Server的ip地址
-server_port = 7000
-[secret_tcp]
-# If the type is secret tcp, remote_port is useless
-# Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
-type = stcp
-# sk used for authentication for visitors
-sk = abcdefg # sk要和Client2相同
-local_ip = 127.0.0.1 # Client1的访问地址
-local_port = 6006 # Client1的访问端口
-use_encryption = false
-use_compression = false
-</code></pre><p><strong>run the Client1:</strong> <code>./frpc -c ./frpc.ini</code></p>
-<h4 id="43">4.3</h4>
-<p><strong>Client2：</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl">server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+</span></span><span class="line"><span class="cl">server_port = 7000
+</span></span><span class="line"><span class="cl">[secret_tcp]
+</span></span><span class="line"><span class="cl"># If the type is secret tcp, remote_port is useless
+</span></span><span class="line"><span class="cl"># Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
+</span></span><span class="line"><span class="cl">type = stcp
+</span></span><span class="line"><span class="cl"># sk used for authentication for visitors
+</span></span><span class="line"><span class="cl">sk = abcdefg # sk要和Client2相同
+</span></span><span class="line"><span class="cl">local_ip = 127.0.0.1 # Client1的访问地址
+</span></span><span class="line"><span class="cl">local_port = 6006 # Client1的访问端口
+</span></span><span class="line"><span class="cl">use_encryption = false
+</span></span><span class="line"><span class="cl">use_compression = false
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>run the Client1:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h4 id="43">4.3
+</h4><p><strong>Client2：</strong>
 <em>frpc.ini</em></p>
-<pre><code>[common]
-server_addr = aaa.bbb.ccc.ddd
-server_port = 7000
-# user of frpc should be same in both stcp server and stcp visitor
-[secret_tcp_visitor]
-# frpc role visitor -&gt; frps -&gt; frpc role server
-role = visitor
-type = stcp
-# the server name you want to visitor
-server_name = secret_tcp
-sk = abcdefg # sk要和Client1相同
-# connect this address to visitor stcp server
-bind_addr = 127.0.0.1 # Client2的访问地址
-bind_port = 6006 # Client2的访问端口
-use_encryption = false
-use_compression = false
-</code></pre><p><strong>run the Client2:</strong> <code>./frpc -c ./frpc.ini</code></p>
-<h3 id="5-其他小的细节">5 其他小的细节</h3>
-<h4 id="51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置">5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：</h4>
-<p><code>login to server failed: dial tcp no route to host</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl">server_addr = aaa.bbb.ccc.ddd
+</span></span><span class="line"><span class="cl">server_port = 7000
+</span></span><span class="line"><span class="cl"># user of frpc should be same in both stcp server and stcp visitor
+</span></span><span class="line"><span class="cl">[secret_tcp_visitor]
+</span></span><span class="line"><span class="cl"># frpc role visitor -&gt; frps -&gt; frpc role server
+</span></span><span class="line"><span class="cl">role = visitor
+</span></span><span class="line"><span class="cl">type = stcp
+</span></span><span class="line"><span class="cl"># the server name you want to visitor
+</span></span><span class="line"><span class="cl">server_name = secret_tcp
+</span></span><span class="line"><span class="cl">sk = abcdefg # sk要和Client1相同
+</span></span><span class="line"><span class="cl"># connect this address to visitor stcp server
+</span></span><span class="line"><span class="cl">bind_addr = 127.0.0.1 # Client2的访问地址
+</span></span><span class="line"><span class="cl">bind_port = 6006 # Client2的访问端口
+</span></span><span class="line"><span class="cl">use_encryption = false
+</span></span><span class="line"><span class="cl">use_compression = false
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>run the Client2:</strong> <code>./frpc -c ./frpc.ini</code></p>
+<h3 id="5-其他小的细节">5 其他小的细节
+</h3><h4 id="51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置">5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：
+</h4><p><code>login to server failed: dial tcp no route to host</code></p>
 <p>解决办法：</p>
-<pre><code>firewall-cmd --state (出现running，表示在运行)
-systemctl stop firewalld.service
-</code></pre><h4 id="52-防火墙的相关命令">5.2 防火墙的相关命令</h4>
-<pre><code>启动：# systemctl start  firewalld
-查看状态：# systemctl status firewalld 或者 firewall-cmd –state
-停止：# systemctl disable firewalld
-禁用：# systemctl stop firewalld
-重启：#systemctl restart firewalld
-永久的开放需要的端口
-sudo firewall-cmd --zone=public --add-port=7000/tcp --permanent
-sudo firewall-cmd --reload //重载生效刚才的端口设置
-</code></pre><h3 id="6-最后友情提示">6 最后友情提示：</h3>
-<p>注意端口安全，防范风险，避免不必要的麻烦 🙂</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">firewall-cmd --state (出现running，表示在运行)
+</span></span><span class="line"><span class="cl">systemctl stop firewalld.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="52-防火墙的相关命令">5.2 防火墙的相关命令
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">启动：</span><span class="c1"># systemctl start  firewalld</span>
+</span></span><span class="line"><span class="cl"><span class="err">查看状态：</span><span class="c1"># systemctl status firewalld 或者 firewall-cmd –state</span>
+</span></span><span class="line"><span class="cl"><span class="err">停止：</span><span class="c1"># systemctl disable firewalld</span>
+</span></span><span class="line"><span class="cl"><span class="err">禁用：</span><span class="c1"># systemctl stop firewalld</span>
+</span></span><span class="line"><span class="cl"><span class="err">重启：</span><span class="c1">#systemctl restart firewalld</span>
+</span></span><span class="line"><span class="cl"><span class="err">永久的开放需要的端口</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">firewall</span><span class="o">-</span><span class="n">cmd</span> <span class="o">--</span><span class="n">zone</span><span class="o">=</span><span class="n">public</span> <span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">port</span><span class="o">=</span><span class="mi">7000</span><span class="o">/</span><span class="n">tcp</span> <span class="o">--</span><span class="n">permanent</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">firewall</span><span class="o">-</span><span class="n">cmd</span> <span class="o">--</span><span class="n">reload</span> <span class="o">//</span><span class="err">重载生效刚才的端口设置</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6-最后友情提示">6 最后友情提示：
+</h3><p>注意端口安全，防范风险，避免不必要的麻烦 🙂</p>
 
 </section>
 
@@ -322,7 +492,7 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
     
     <section class="article-tags">
         
-            <a href="/tags/frp/">frp</a>
+            <a href="/tags/frp/">Frp</a>
         
             <a href="/tags/linux/">linux</a>
         
@@ -343,17 +513,20 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
     </section>
     </footer>
 
+
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="">
     <a href="/p/conda-with-linux/">
         
@@ -364,8 +537,9 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/deepin-wechat-sending-images-problem/">
         
@@ -376,8 +550,9 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/archlinux-electron-ssr/">
         
@@ -388,8 +563,9 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/linux-proxy/">
         
@@ -400,8 +576,9 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/vscode-with-docker/">
         
@@ -412,13 +589,13 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
-
+     
     
         
     <div id="gitalk-container"></div>
@@ -437,6 +614,7 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         admin: ["linkghm"],
         distractionFreeMode: false, 
         id: md5(location.pathname), 
+        proxy: null ,
     });
     (function () {
         if (
@@ -451,6 +629,7 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
 </script>
 
 
+
     
 
     <footer class="site-footer">
@@ -459,14 +638,17 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         
             2018 - 
         
-        2022 Linkghm
+        2025 Linkghm
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -530,26 +712,27 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
+
             </main>
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

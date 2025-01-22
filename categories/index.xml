@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Linkghm</title>
-    <link>https://guohuimin.top/categories/</link>
-    <description>Recent content in Categories on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>study</title>
-      <link>https://guohuimin.top/categories/study/</link>
-      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/categories/study/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://guohuimin.top/categories/life/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/categories/life/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Categories on Linkghm</title>
+        <link>https://guohuimin.top/categories/</link>
+        <description>Recent content in Categories on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Study</title>
+        <link>https://guohuimin.top/categories/study/</link>
+        <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/categories/study/</guid>
+        <description>&lt;img src="https://guohuimin.top/categories/study/study.jpg" alt="Featured image of post Study" /&gt;</description>
+        </item>
+        <item>
+        <title>Life</title>
+        <link>https://guohuimin.top/categories/life/</link>
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/categories/life/</guid>
+        <description>&lt;img src="https://guohuimin.top/categories/life/life.jpg" alt="Featured image of post Life" /&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

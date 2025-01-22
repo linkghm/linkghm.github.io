@@ -1,85 +1,339 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>linux on Linkghm</title>
-    <link>https://guohuimin.top/tags/linux/</link>
-    <description>Recent content in linux on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Anaconda&#43;Linux个人用户配置</title>
-      <link>https://guohuimin.top/p/conda-with-linux/</link>
-      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/conda-with-linux/</guid>
-      <description>环境变量的种类 首先是linux下环境变量的种类：
- /etc/profile /etc/environment ~/.bash_profile ~/.bashrc 1~2是全局变量，3~4是用户个人的变量  具体配置 个人用户配置方法如下： vim ~/.bashrc
-export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;
-刷新环境变量
-source .bashrc 
-检查是否起作用：
-conda
-清华源设置 清华源：(https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]
-后记 如果说，上述环境创建好后（base），再新创建一个虚拟环境。 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。 这是因为conda init会把bashrc之前的环境注释掉，只需要：
-  重新编辑.bashrc vim ~/.bashrc 
-  将下方的注释取消即可。
-  export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>Deepin-wechat无法发送图</title>
-      <link>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</link>
-      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</guid>
-      <description>Github Issue：https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42
-具体解决办法（摘自Issue，作为个人记录）：
-yay -S deepin-wine5sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMDWINE_CMD=&amp;quot;wine&amp;quot; --&amp;gt; WINE_CMD=&amp;quot;deepin-wine5&amp;quot; (具体修改地方)kill wine以及wechat进程，重启wechat即可</description>
-    </item>
-    
-    <item>
-      <title>ArchLinux下Electron-ssr启动问题</title>
-      <link>https://guohuimin.top/p/archlinux-electron-ssr/</link>
-      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/archlinux-electron-ssr/</guid>
-      <description>1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。
-/usr/bin/electron-ssrelectron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory个人当前的系统信息如下：
-Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux
-2 原因分析： cat /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。
-3 具体解决办法： sudo vim /usr/bin/electron-ssr
-#!/bin/bashexec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;更改为
-#!/bin/bashexec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;4 重新启动即可 </description>
-    </item>
-    
-    <item>
-      <title>frp的使用</title>
-      <link>https://guohuimin.top/p/frp/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/frp/</guid>
-      <description>1 What is frp? （摘自项目README） frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.
-frp项目地址：https://github.com/fatedier/frp
-2 注：本文是基于linux的配置 release: https://github.com/fatedier/frp/releases
-3 无stcp： Server： frps.ini
-[common]bind_port = 7000 # Client和Server通信的端口run the server:.</description>
-    </item>
-    
-    <item>
-      <title>Linux终端代理</title>
-      <link>https://guohuimin.top/p/linux-proxy/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/linux-proxy/</guid>
-      <description>主要针对yay安装或者更新包，其余情况可以使用proxychains。
-终端结束，代理结束
-http 代理：
-export http=http://127.0.0.1:1080 export https=http://127.0.0.1:1080
-socket 代理：
-export http_proxy=socks5://127.0.0.1:1080 export https_proxy=socks5://127.0.0.1:1080</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>linux on Linkghm</title>
+        <link>https://guohuimin.top/tags/linux/</link>
+        <description>Recent content in linux on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Anaconda&#43;Linux个人用户配置</title>
+        <link>https://guohuimin.top/p/conda-with-linux/</link>
+        <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/conda-with-linux/</guid>
+        <description>&lt;h3 id=&#34;环境变量的种类&#34;&gt;环境变量的种类
+&lt;/h3&gt;&lt;p&gt;首先是linux下环境变量的种类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;/etc/profile&lt;/li&gt;
+&lt;li&gt;/etc/environment&lt;/li&gt;
+&lt;li&gt;~/.bash_profile&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;/.bashrc
+1&lt;/del&gt;2是全局变量，3~4是用户个人的变量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;具体配置&#34;&gt;具体配置
+&lt;/h3&gt;&lt;p&gt;个人用户配置方法如下：
+&lt;code&gt; vim ~/.bashrc &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot; &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;刷新环境变量&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; source .bashrc  &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;检查是否起作用：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; conda &lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;清华源设置&#34;&gt;清华源设置
+&lt;/h3&gt;&lt;p&gt;清华源：(&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%29[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;后记&#34;&gt;后记
+&lt;/h3&gt;&lt;p&gt;如果说，上述环境创建好后（base），再新创建一个虚拟环境。
+conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。
+这是因为conda init会把bashrc之前的环境注释掉，只需要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;重新编辑.bashrc
+&lt;code&gt; vim ~/.bashrc  &lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将下方的注释取消即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt; export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot; &lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Deepin-wechat无法发送图</title>
+        <link>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</link>
+        <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</guid>
+        <description>&lt;p&gt;Github Issue：&lt;a class=&#34;link&#34; href=&#34;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;具体解决办法（摘自Issue，作为个人记录）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S deepin-wine5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WINE_CMD=&amp;#34;wine&amp;#34; --&amp;gt; WINE_CMD=&amp;#34;deepin-wine5&amp;#34; (具体修改地方)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kill wine以及wechat进程，重启wechat即可
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>ArchLinux下Electron-ssr启动问题</title>
+        <link>https://guohuimin.top/p/archlinux-electron-ssr/</link>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/archlinux-electron-ssr/</guid>
+        <description>&lt;h3 id=&#34;1-问题再现&#34;&gt;1 问题再现：
+&lt;/h3&gt;&lt;p&gt;最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;electron&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;electron4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loading&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shared&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libraries&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libre2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;so&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cannot&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;open&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shared&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;such&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;个人当前的系统信息如下：&lt;/p&gt;
+&lt;p&gt;Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux&lt;/p&gt;
+&lt;h3 id=&#34;2-原因分析&#34;&gt;2 原因分析：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cat /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron4 /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。&lt;/p&gt;
+&lt;h3 id=&#34;3-具体解决办法&#34;&gt;3 具体解决办法：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo vim /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron4 /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;更改为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;4-重新启动即可&#34;&gt;4 重新启动即可
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>frp的使用</title>
+        <link>https://guohuimin.top/p/frp/</link>
+        <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/frp/</guid>
+        <description>&lt;h3 id=&#34;1-what-is-frp-摘自项目readme&#34;&gt;1 What is frp? （摘自项目README）
+&lt;/h3&gt;&lt;p&gt;frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.&lt;/p&gt;
+&lt;p&gt;frp项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/fatedier/frp&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-注本文是基于linux的配置&#34;&gt;2 注：本文是基于linux的配置
+&lt;/h3&gt;&lt;p&gt;release: &lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/fatedier/frp/releases&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-无stcp&#34;&gt;3 无stcp：
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
+&lt;em&gt;frps.ini&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 7000 # Client和Server通信的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run the server:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./frps -c ./frps.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Client：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frpc.ini配置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000 # Client和Server通信的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[tcp_port]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_ip = 127.0.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_port = 6006 # Client服务的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote_port = 6006 # Server暴露的端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-有stcp&#34;&gt;4 有stcp：
+&lt;/h3&gt;&lt;p&gt;具体逻辑：Client端1–&amp;gt;frps–&amp;gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。&lt;/p&gt;
+&lt;h4 id=&#34;41&#34;&gt;4.1
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
+&lt;em&gt;frps.ini&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the server:&lt;/strong&gt; &lt;code&gt;./frps -c ./frps.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;42&#34;&gt;4.2
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Client1：&lt;/strong&gt;
+&lt;em&gt;frpc.ini&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[secret_tcp]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# If the type is secret tcp, remote_port is useless
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = stcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sk used for authentication for visitors
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sk = abcdefg # sk要和Client2相同
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_ip = 127.0.0.1 # Client1的访问地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_port = 6006 # Client1的访问端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_encryption = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_compression = false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client1:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;43&#34;&gt;4.3
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Client2：&lt;/strong&gt;
+&lt;em&gt;frpc.ini&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# user of frpc should be same in both stcp server and stcp visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[secret_tcp_visitor]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# frpc role visitor -&amp;gt; frps -&amp;gt; frpc role server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;role = visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = stcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# the server name you want to visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_name = secret_tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sk = abcdefg # sk要和Client1相同
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# connect this address to visitor stcp server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_addr = 127.0.0.1 # Client2的访问地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 6006 # Client2的访问端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_encryption = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_compression = false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client2:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-其他小的细节&#34;&gt;5 其他小的细节
+&lt;/h3&gt;&lt;h4 id=&#34;51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置&#34;&gt;5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;login to server failed: dial tcp no route to host&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解决办法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --state (出现running，表示在运行)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop firewalld.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;52-防火墙的相关命令&#34;&gt;5.2 防火墙的相关命令
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;启动：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl start  firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;查看状态：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl status firewalld 或者 firewall-cmd –state&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;停止：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl disable firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;禁用：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl stop firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;重启：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#systemctl restart firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;永久的开放需要的端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firewall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tcp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;permanent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firewall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;重载生效刚才的端口设置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;6-最后友情提示&#34;&gt;6 最后友情提示：
+&lt;/h3&gt;&lt;p&gt;注意端口安全，防范风险，避免不必要的麻烦 🙂&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux终端代理</title>
+        <link>https://guohuimin.top/p/linux-proxy/</link>
+        <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/linux-proxy/</guid>
+        <description>&lt;p&gt;主要针对yay安装或者更新包，其余情况可以使用proxychains。&lt;/p&gt;
+&lt;p&gt;终端结束，代理结束&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;http 代理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;export http=http://127.0.0.1:1080
+export https=http://127.0.0.1:1080&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;socket 代理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;export http_proxy=socks5://127.0.0.1:1080
+export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

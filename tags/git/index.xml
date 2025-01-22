@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>git on Linkghm</title>
-    <link>https://guohuimin.top/tags/git/</link>
-    <description>Recent content in git on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>git push取消密码</title>
-      <link>https://guohuimin.top/p/git-push-cancel-password/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/git-push-cancel-password/</guid>
-      <description>在进行git push的时候，总是会提示输入github帐号和密码。
-原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。
-具体解决办法：
-1 在当前工程保存帐号密码： vim .git-credentials
-https://{username}:{password}@github.com
-git config --global credential.helper store
-2 直接修改当前工程.git的配置 前提是已经将本地的public key保存在了github
-vim .git/config
-[remote &amp;quot;origin&amp;quot;]url = 这里粘贴github上的ssh链接</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Git on Linkghm</title>
+        <link>https://guohuimin.top/tags/git/</link>
+        <description>Recent content in Git on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git push取消密码</title>
+        <link>https://guohuimin.top/p/git-push-cancel-password/</link>
+        <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/git-push-cancel-password/</guid>
+        <description>&lt;p&gt;在进行git push的时候，总是会提示输入github帐号和密码。&lt;/p&gt;
+&lt;p&gt;原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。&lt;/p&gt;
+&lt;p&gt;具体解决办法：&lt;/p&gt;
+&lt;h3 id=&#34;1-在当前工程保存帐号密码&#34;&gt;1 在当前工程保存帐号密码：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vim .git-credentials&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://{username}:{password}@github.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global credential.helper store&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-直接修改当前工程git的配置&#34;&gt;2 直接修改当前工程.git的配置
+&lt;/h3&gt;&lt;p&gt;前提是已经将本地的public key保存在了github&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vim .git/config&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[remote &amp;#34;origin&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url = 这里粘贴github上的ssh链接
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

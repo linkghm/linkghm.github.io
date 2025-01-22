@@ -5,46 +5,70 @@
         <link>https://guohuimin.top/</link>
         <description>Recent content on Linkghm</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en</language>
+        <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Archives</title>
+        <link>https://guohuimin.top/archives/</link>
+        <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>About</title>
+        <link>https://guohuimin.top/about/</link>
+        <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/about/</guid>
+        <description>&lt;h2 id=&#34;me&#34;&gt;Me
+&lt;/h2&gt;&lt;p&gt;A PhD student major in Biomedical Engineering.&lt;/p&gt;
+&lt;p&gt;Github: &lt;a class=&#34;link&#34; href=&#34;https://github.com/linkghm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/linkghm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Email：&lt;a class=&#34;link&#34; href=&#34;mailto:linkghm@outlook.com&#34; &gt;linkghm@outlook.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;areas-of-interest&#34;&gt;Areas of interest
+&lt;/h2&gt;&lt;p&gt;Computer Vision, Medical Image Processing, Deep Learning&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Anaconda&#43;Linux个人用户配置</title>
         <link>https://guohuimin.top/p/conda-with-linux/</link>
         <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/conda-with-linux/</guid>
-        <description>&lt;h3 id=&#34;环境变量的种类&#34;&gt;环境变量的种类&lt;/h3&gt;
-&lt;p&gt;首先是linux下环境变量的种类：&lt;/p&gt;
+        <description>&lt;h3 id=&#34;环境变量的种类&#34;&gt;环境变量的种类
+&lt;/h3&gt;&lt;p&gt;首先是linux下环境变量的种类：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;/etc/profile&lt;/li&gt;
 &lt;li&gt;/etc/environment&lt;/li&gt;
 &lt;li&gt;~/.bash_profile&lt;/li&gt;
-&lt;li&gt;~/.bashrc
-1~2是全局变量，3~4是用户个人的变量&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;/.bashrc
+1&lt;/del&gt;2是全局变量，3~4是用户个人的变量&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;具体配置&#34;&gt;具体配置&lt;/h3&gt;
-&lt;p&gt;个人用户配置方法如下：
-&lt;code&gt;vim ~/.bashrc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;具体配置&#34;&gt;具体配置
+&lt;/h3&gt;&lt;p&gt;个人用户配置方法如下：
+&lt;code&gt; vim ~/.bashrc &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot; &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;刷新环境变量&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;source .bashrc &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; source .bashrc  &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;检查是否起作用：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;conda&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;清华源设置&#34;&gt;清华源设置&lt;/h3&gt;
-&lt;p&gt;清华源：(&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)%5Bhttps://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%5D&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;后记&#34;&gt;后记&lt;/h3&gt;
-&lt;p&gt;如果说，上述环境创建好后（base），再新创建一个虚拟环境。
+&lt;p&gt;&lt;code&gt; conda &lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;清华源设置&#34;&gt;清华源设置
+&lt;/h3&gt;&lt;p&gt;清华源：(&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/%29[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)[https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/]&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;后记&#34;&gt;后记
+&lt;/h3&gt;&lt;p&gt;如果说，上述环境创建好后（base），再新创建一个虚拟环境。
 conda会提示进行conda init操作，等下次再连上服务器可能会发现，conda环境消失了。
 这是因为conda init会把bashrc之前的环境注释掉，只需要：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;重新编辑.bashrc
-&lt;code&gt;vim ~/.bashrc &lt;/code&gt;&lt;/p&gt;
+&lt;code&gt; vim ~/.bashrc  &lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;将下方的注释取消即可。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; export PATH=&amp;quot;/opt/anaconda/bin:$PATH&amp;quot; &lt;/code&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -62,8 +86,7 @@ conda会提示进行conda init操作，等下次再连上服务器可能会发�
 &lt;p&gt;2020.11 -2020.12 返回学校准备博士考试，度过了难熬的这段时间，最后终于在2020年最后一天看到了拟录取结果。&lt;/p&gt;
 &lt;p&gt;2020年到现在，疫情还在肆虐，希望自己能收拾好心情，从新出发，踏踏实实走好接下来的每一天。&lt;/p&gt;
 &lt;!-- ![学校的一角](2021.jpg) --&gt;
-&lt;p&gt;&lt;img src=&#34;2021.jpg&#34; width=&#34;80%&#34; height=&#34;80%&#34; alt=&#34;&#34; style=&#34;vertical-align: middle&#34; /&gt;&lt;/p&gt;
-</description>
+&lt;img src=&#34;2021.jpg&#34; width=&#34;80%&#34; height=&#34;80%&#34; alt=&#34;&#34; style=&#34;vertical-align: middle&#34; /&gt;</description>
         </item>
         <item>
         <title>vscode &#43; docker in the local environment</title>
@@ -73,28 +96,39 @@ conda会提示进行conda init操作，等下次再连上服务器可能会发�
         <guid>https://guohuimin.top/p/vscode-with-docker/</guid>
         <description>&lt;p&gt;由于环境经常出现问题，目前关于深度学习的一些操作都放在容器中进行。&lt;/p&gt;
 &lt;p&gt;但是很多时候，需要在本机进行调试，随后才会在服务器上进行训练，针对这个问题我们需要在本机创建容器进行调试。&lt;/p&gt;
-&lt;h3 id=&#34;1-首先是安装容器这里推荐的深度学习的容器为ufoymdeepo&#34;&gt;1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo&lt;/h3&gt;
-&lt;p&gt;docker hub：&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/ufoym/deepo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;1-首先是安装容器这里推荐的深度学习的容器为ufoymdeepo&#34;&gt;1 首先是安装容器，这里推荐的深度学习的容器为ufoym/deepo
+&lt;/h3&gt;&lt;p&gt;docker hub：&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/ufoym/deepo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://hub.docker.com/r/ufoym/deepo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;github：&lt;a class=&#34;link&#34; href=&#34;https://www.github.com/ufoym/deepo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.github.com/ufoym/deepo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;提示：可以将docker的服务开机启动。&lt;/p&gt;
-&lt;h3 id=&#34;2-运行容器请参考官方文档&#34;&gt;2 运行容器请参考官方文档&lt;/h3&gt;
-&lt;h3 id=&#34;3-容器创建后正常是需要sudo权限进行操作但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务如下所示&#34;&gt;3 容器创建后，正常是需要sudo权限进行操作，但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务，如下所示：&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;connect EACCES /var/run/docker.sock&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4-docker官方针对这个情况有具体的解决步骤&#34;&gt;4 docker官方针对这个情况有具体的解决步骤：&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/linux-postinstall/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;2-运行容器请参考官方文档&#34;&gt;2 运行容器请参考官方文档
+&lt;/h3&gt;&lt;h3 id=&#34;3-容器创建后正常是需要sudo权限进行操作但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务如下所示&#34;&gt;3 容器创建后，正常是需要sudo权限进行操作，但是这样会导致vscode的dokcer插件无法检测到运行的dokcer服务，如下所示：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;connect EACCES /var/run/docker.sock&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-docker官方针对这个情况有具体的解决步骤&#34;&gt;4 docker官方针对这个情况有具体的解决步骤：
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/linux-postinstall/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://docs.docker.com/engine/install/linux-postinstall/&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    sudo groupadd docker
-
-    sudo usermod -aG docker $USER
-
-    newgrp docker （linux下，刷新上述的更新；稳妥起见可以重启一下电脑）
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;5-打开terminal测试&#34;&gt;5 打开terminal，测试&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;docker run hello-world&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sudo groupadd docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sudo usermod -aG docker $USER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    newgrp docker （linux下，刷新上述的更新；稳妥起见可以重启一下电脑）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;5-打开terminal测试&#34;&gt;5 打开terminal，测试
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker run hello-world&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;如果可以正常启动服务，说明已经将当前用户添加到了docker组&lt;/p&gt;
-&lt;h3 id=&#34;6-打开vscode可以看到左侧docker插件中已经显示出运行的容器了右键attach-vscode就可以在vscode中打开容器环境进行操作&#34;&gt;6 打开vscode，可以看到左侧docker插件中已经显示出运行的容器了。右键attach vscode就可以在vscode中打开容器环境进行操作。&lt;/h3&gt;
-&lt;p&gt;附：目前发现的一个问题是，打开容器后cpu的占用率非常高，但是还不知道怎么解决。&lt;/p&gt;
+&lt;h3 id=&#34;6-打开vscode可以看到左侧docker插件中已经显示出运行的容器了右键attach-vscode就可以在vscode中打开容器环境进行操作&#34;&gt;6 打开vscode，可以看到左侧docker插件中已经显示出运行的容器了。右键attach vscode就可以在vscode中打开容器环境进行操作。
+&lt;/h3&gt;&lt;p&gt;附：目前发现的一个问题是，打开容器后cpu的占用率非常高，但是还不知道怎么解决。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -105,16 +139,16 @@ conda会提示进行conda init操作，等下次再连上服务器可能会发�
         <guid>https://guohuimin.top/p/find-pi-without-monitor/</guid>
         <description>&lt;p&gt;本文仅作个人记录，如有不同请Google。&lt;/p&gt;
 &lt;p&gt;前提：树莓派安装在局域网内&lt;/p&gt;
-&lt;h3 id=&#34;1-安装nmap&#34;&gt;1 安装nmap&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;yay -S nmap&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2-查看当前主机的ip&#34;&gt;2 查看当前主机的ip&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;ip addr&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3-得到局域网的ip网段&#34;&gt;3 得到局域网的ip网段&lt;/h3&gt;
-&lt;p&gt;e.g. 192.168.X.X&lt;/p&gt;
-&lt;h3 id=&#34;4-使用nmap找到树莓派&#34;&gt;4 使用nmap找到树莓派&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;nmap -sP 192.168.X.0/22&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;5-ssh连接树莓派我的名字是ubuntu&#34;&gt;5 ssh连接树莓派（我的名字是ubuntu）&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;ssh ubuntu@192.168.X.Y&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-安装nmap&#34;&gt;1 安装nmap
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;yay -S nmap&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-查看当前主机的ip&#34;&gt;2 查看当前主机的ip
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ip addr&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-得到局域网的ip网段&#34;&gt;3 得到局域网的ip网段
+&lt;/h3&gt;&lt;p&gt;e.g. 192.168.X.X&lt;/p&gt;
+&lt;h3 id=&#34;4-使用nmap找到树莓派&#34;&gt;4 使用nmap找到树莓派
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;nmap -sP 192.168.X.0/22&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-ssh连接树莓派我的名字是ubuntu&#34;&gt;5 ssh连接树莓派（我的名字是ubuntu）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ssh ubuntu@192.168.X.Y&lt;/code&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -126,11 +160,21 @@ conda会提示进行conda init操作，等下次再连上服务器可能会发�
         <description>&lt;p&gt;Github Issue：&lt;a class=&#34;link&#34; href=&#34;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;具体解决办法（摘自Issue，作为个人记录）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;yay -S deepin-wine5
-sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMD
-WINE_CMD=&amp;quot;wine&amp;quot; --&amp;gt; WINE_CMD=&amp;quot;deepin-wine5&amp;quot; (具体修改地方)
-kill wine以及wechat进程，重启wechat即可
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S deepin-wine5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh WINE_CMD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WINE_CMD=&amp;#34;wine&amp;#34; --&amp;gt; WINE_CMD=&amp;#34;deepin-wine5&amp;#34; (具体修改地方)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kill wine以及wechat进程，重启wechat即可
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>ArchLinux下Electron-ssr启动问题</title>
@@ -138,26 +182,58 @@ kill wine以及wechat进程，重启wechat即可
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/archlinux-electron-ssr/</guid>
-        <description>&lt;h3 id=&#34;1-问题再现&#34;&gt;1 问题再现：&lt;/h3&gt;
-&lt;p&gt;最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/usr/bin/electron-ssr
-electron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;个人当前的系统信息如下：&lt;/p&gt;
+        <description>&lt;h3 id=&#34;1-问题再现&#34;&gt;1 问题再现：
+&lt;/h3&gt;&lt;p&gt;最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;electron&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;electron4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loading&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shared&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libraries&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libre2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;so&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cannot&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;open&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shared&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;such&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;个人当前的系统信息如下：&lt;/p&gt;
 &lt;p&gt;Linux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux&lt;/p&gt;
-&lt;h3 id=&#34;2-原因分析&#34;&gt;2 原因分析：&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;cat /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-exec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。&lt;/p&gt;
-&lt;h3 id=&#34;3-具体解决办法&#34;&gt;3 具体解决办法：&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo vim /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-exec electron4 /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更改为&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-exec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;4-重新启动即可&#34;&gt;4 重新启动即可&lt;/h3&gt;
-</description>
+&lt;h3 id=&#34;2-原因分析&#34;&gt;2 原因分析：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cat /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron4 /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。&lt;/p&gt;
+&lt;h3 id=&#34;3-具体解决办法&#34;&gt;3 具体解决办法：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo vim /usr/bin/electron-ssr&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron4 /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;更改为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; electron /usr/share/electron-ssr/app.asar &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;4-重新启动即可&#34;&gt;4 重新启动即可
+&lt;/h3&gt;</description>
         </item>
         <item>
         <title>Vim复制粘贴到寄存器</title>
@@ -165,27 +241,53 @@ exec electron /usr/share/electron-ssr/app.asar &amp;quot;$@&amp;quot;
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/vim-clipboard-problem/</guid>
-        <description>&lt;h3 id=&#34;1-首先确认自己使用的vim版本&#34;&gt;1 首先确认自己使用的vim版本：&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;vim --version | grep clipboard
--clipboard         +jumplist          +popupwin          +user_commands
-+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。&lt;/p&gt;
-&lt;h3 id=&#34;2-解决办法&#34;&gt;2 解决办法：&lt;/h3&gt;
-&lt;h4 id=&#34;21-安装gvim&#34;&gt;2.1 安装gvim&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;yay -R vim # 卸载原始的vim
-yay -S gvim # 安装gvim
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;22-检查vim版本信息&#34;&gt;2.2 检查vim版本信息&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;vim --version | grep clipboard
-+clipboard         +jumplist          +popupwin          +user_commands
-+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim&#34;&gt;2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：&lt;/h4&gt;
-&lt;p&gt;这里是直接对vim的全局配置进行更改，个人用户更改请Google。&lt;/p&gt;
+        <description>&lt;h3 id=&#34;1-首先确认自己使用的vim版本&#34;&gt;1 首先确认自己使用的vim版本：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim --version | grep clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-clipboard         +jumplist          +popupwin          +user_commands
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。&lt;/p&gt;
+&lt;h3 id=&#34;2-解决办法&#34;&gt;2 解决办法：
+&lt;/h3&gt;&lt;h4 id=&#34;21-安装gvim&#34;&gt;2.1 安装gvim
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -R vim # 卸载原始的vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S gvim # 安装gvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;22-检查vim版本信息&#34;&gt;2.2 检查vim版本信息
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim --version | grep clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+clipboard         +jumplist          +popupwin          +user_commands
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim&#34;&gt;2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：
+&lt;/h4&gt;&lt;p&gt;这里是直接对vim的全局配置进行更改，个人用户更改请Google。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sudo vim /etc/vimrc&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在最下边加入&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;set clipboard=unnamedplus&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;关于unnamed和unnamedplus，可以参考 StackOverFlow&lt;/p&gt;
-&lt;h4 id=&#34;24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器&#34;&gt;2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。&lt;/h4&gt;
-&lt;p&gt;输入:reg可以看到复制下来的内容。&lt;/p&gt;
+&lt;h4 id=&#34;24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器&#34;&gt;2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。
+&lt;/h4&gt;&lt;p&gt;输入:reg可以看到复制下来的内容。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -194,93 +296,184 @@ yay -S gvim # 安装gvim
         <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/frp/</guid>
-        <description>&lt;h3 id=&#34;1-what-is-frp-摘自项目readme&#34;&gt;1 What is frp? （摘自项目README）&lt;/h3&gt;
-&lt;p&gt;frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.&lt;/p&gt;
+        <description>&lt;h3 id=&#34;1-what-is-frp-摘自项目readme&#34;&gt;1 What is frp? （摘自项目README）
+&lt;/h3&gt;&lt;p&gt;frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.&lt;/p&gt;
 &lt;p&gt;frp项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/fatedier/frp&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2-注本文是基于linux的配置&#34;&gt;2 注：本文是基于linux的配置&lt;/h3&gt;
-&lt;p&gt;release: &lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;2-注本文是基于linux的配置&#34;&gt;2 注：本文是基于linux的配置
+&lt;/h3&gt;&lt;p&gt;release: &lt;a class=&#34;link&#34; href=&#34;https://github.com/fatedier/frp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/fatedier/frp/releases&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3-无stcp&#34;&gt;3 无stcp：&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
+&lt;h3 id=&#34;3-无stcp&#34;&gt;3 无stcp：
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
 &lt;em&gt;frps.ini&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[common]
-bind_port = 7000 # Client和Server通信的端口
-run the server:
-./frps -c ./frps.ini
-Client：
-frpc.ini配置
-[common]
-server_addr = aaa.bbb.ccc.ddd # Server的ip地址
-server_port = 7000 # Client和Server通信的端口
-[tcp_port]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 6006 # Client服务的端口
-remote_port = 6006 # Server暴露的端口
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;run the Client:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4-有stcp&#34;&gt;4 有stcp：&lt;/h3&gt;
-&lt;p&gt;具体逻辑：Client端1–&amp;gt;frps–&amp;gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。&lt;/p&gt;
-&lt;h4 id=&#34;41&#34;&gt;4.1&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 7000 # Client和Server通信的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run the server:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./frps -c ./frps.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Client：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frpc.ini配置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000 # Client和Server通信的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[tcp_port]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_ip = 127.0.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_port = 6006 # Client服务的端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote_port = 6006 # Server暴露的端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-有stcp&#34;&gt;4 有stcp：
+&lt;/h3&gt;&lt;p&gt;具体逻辑：Client端1–&amp;gt;frps–&amp;gt;Client端2，相当于公网服务器充当了一个媒介。例如，我在Client1开启了tensorboard，端口是6006。通过公网服务器，我可以在本地的电脑上访问处于内网的Client1的6006端口。&lt;/p&gt;
+&lt;h4 id=&#34;41&#34;&gt;4.1
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Server：&lt;/strong&gt;
 &lt;em&gt;frps.ini&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[common]
-bind_port = 7000
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;run the server:&lt;/strong&gt; &lt;code&gt;./frps -c ./frps.ini&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;42&#34;&gt;4.2&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Client1：&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the server:&lt;/strong&gt; &lt;code&gt;./frps -c ./frps.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;42&#34;&gt;4.2
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Client1：&lt;/strong&gt;
 &lt;em&gt;frpc.ini&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[common]
-server_addr = aaa.bbb.ccc.ddd # Server的ip地址
-server_port = 7000
-[secret_tcp]
-# If the type is secret tcp, remote_port is useless
-# Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
-type = stcp
-# sk used for authentication for visitors
-sk = abcdefg # sk要和Client2相同
-local_ip = 127.0.0.1 # Client1的访问地址
-local_port = 6006 # Client1的访问端口
-use_encryption = false
-use_compression = false
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;run the Client1:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;43&#34;&gt;4.3&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Client2：&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd # Server的ip地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[secret_tcp]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# If the type is secret tcp, remote_port is useless
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = stcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sk used for authentication for visitors
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sk = abcdefg # sk要和Client2相同
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_ip = 127.0.0.1 # Client1的访问地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;local_port = 6006 # Client1的访问端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_encryption = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_compression = false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client1:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;43&#34;&gt;4.3
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Client2：&lt;/strong&gt;
 &lt;em&gt;frpc.ini&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[common]
-server_addr = aaa.bbb.ccc.ddd
-server_port = 7000
-# user of frpc should be same in both stcp server and stcp visitor
-[secret_tcp_visitor]
-# frpc role visitor -&amp;gt; frps -&amp;gt; frpc role server
-role = visitor
-type = stcp
-# the server name you want to visitor
-server_name = secret_tcp
-sk = abcdefg # sk要和Client1相同
-# connect this address to visitor stcp server
-bind_addr = 127.0.0.1 # Client2的访问地址
-bind_port = 6006 # Client2的访问端口
-use_encryption = false
-use_compression = false
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;run the Client2:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;5-其他小的细节&#34;&gt;5 其他小的细节&lt;/h3&gt;
-&lt;h4 id=&#34;51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置&#34;&gt;5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;login to server failed: dial tcp no route to host&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[common]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_addr = aaa.bbb.ccc.ddd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_port = 7000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# user of frpc should be same in both stcp server and stcp visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[secret_tcp_visitor]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# frpc role visitor -&amp;gt; frps -&amp;gt; frpc role server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;role = visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = stcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# the server name you want to visitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_name = secret_tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sk = abcdefg # sk要和Client1相同
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# connect this address to visitor stcp server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_addr = 127.0.0.1 # Client2的访问地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bind_port = 6006 # Client2的访问端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_encryption = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_compression = false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;run the Client2:&lt;/strong&gt; &lt;code&gt;./frpc -c ./frpc.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-其他小的细节&#34;&gt;5 其他小的细节
+&lt;/h3&gt;&lt;h4 id=&#34;51-如果出现下述错误表示服务器的防火墙没有关闭也可能是服务器的安全组没有设置&#34;&gt;5.1 如果出现下述错误，表示服务器的防火墙没有关闭（也可能是服务器的安全组没有设置）：
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;login to server failed: dial tcp no route to host&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;解决办法：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;firewall-cmd --state (出现running，表示在运行)
-systemctl stop firewalld.service
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;52-防火墙的相关命令&#34;&gt;5.2 防火墙的相关命令&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;启动：# systemctl start  firewalld
-查看状态：# systemctl status firewalld 或者 firewall-cmd –state
-停止：# systemctl disable firewalld
-禁用：# systemctl stop firewalld
-重启：#systemctl restart firewalld
-永久的开放需要的端口
-sudo firewall-cmd --zone=public --add-port=7000/tcp --permanent
-sudo firewall-cmd --reload //重载生效刚才的端口设置
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;6-最后友情提示&#34;&gt;6 最后友情提示：&lt;/h3&gt;
-&lt;p&gt;注意端口安全，防范风险，避免不必要的麻烦 🙂&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --state (出现running，表示在运行)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop firewalld.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;52-防火墙的相关命令&#34;&gt;5.2 防火墙的相关命令
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;启动：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl start  firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;查看状态：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl status firewalld 或者 firewall-cmd –state&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;停止：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl disable firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;禁用：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# systemctl stop firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;重启：&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#systemctl restart firewalld&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;永久的开放需要的端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firewall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tcp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;permanent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firewall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;重载生效刚才的端口设置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;6-最后友情提示&#34;&gt;6 最后友情提示：
+&lt;/h3&gt;&lt;p&gt;注意端口安全，防范风险，避免不必要的麻烦 🙂&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -292,16 +485,24 @@ sudo firewall-cmd --reload //重载生效刚才的端口设置
         <description>&lt;p&gt;在进行git push的时候，总是会提示输入github帐号和密码。&lt;/p&gt;
 &lt;p&gt;原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。&lt;/p&gt;
 &lt;p&gt;具体解决办法：&lt;/p&gt;
-&lt;h3 id=&#34;1-在当前工程保存帐号密码&#34;&gt;1 在当前工程保存帐号密码：&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;vim .git-credentials&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-在当前工程保存帐号密码&#34;&gt;1 在当前工程保存帐号密码：
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vim .git-credentials&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;https://{username}:{password}@github.com&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git config --global credential.helper store&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2-直接修改当前工程git的配置&#34;&gt;2 直接修改当前工程.git的配置&lt;/h3&gt;
-&lt;p&gt;前提是已经将本地的public key保存在了github&lt;/p&gt;
+&lt;h3 id=&#34;2-直接修改当前工程git的配置&#34;&gt;2 直接修改当前工程.git的配置
+&lt;/h3&gt;&lt;p&gt;前提是已经将本地的public key保存在了github&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;vim .git/config&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[remote &amp;quot;origin&amp;quot;]
-url = 这里粘贴github上的ssh链接
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[remote &amp;#34;origin&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url = 这里粘贴github上的ssh链接
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>Linux终端代理</title>
@@ -325,22 +526,29 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/docker-install-jupyterhub/</guid>
-        <description>&lt;h3 id=&#34;1-新建volume映射文件夹&#34;&gt;1 新建volume映射文件夹&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/jupyterhub&lt;/code&gt;&lt;/p&gt;
+        <description>&lt;h3 id=&#34;1-新建volume映射文件夹&#34;&gt;1 新建volume映射文件夹
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/jupyterhub&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/home&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2-运行容器&#34;&gt;2 运行容器&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-登陆docker-容器&#34;&gt;3 登陆docker 容器&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;docker exec -it jupyterhub bash&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4-安装notebook&#34;&gt;4 安装notebook&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;6-添加用户&#34;&gt;6 添加用户&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;useradd jupyterhub&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-运行容器&#34;&gt;2 运行容器
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-登陆docker-容器&#34;&gt;3 登陆docker 容器
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker exec -it jupyterhub bash&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-安装notebook&#34;&gt;4 安装notebook
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-添加用户&#34;&gt;6 添加用户
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;useradd jupyterhub&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;passwd jupyterhub&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;7-退出交互界面-ctrl--p--q&#34;&gt;7 退出交互界面 （ctrl + p + q）&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo docker ps -a 查看容器运行状态&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;8-进入jupyterhub&#34;&gt;8 进入Jupyterhub&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;localhost:8000&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;7-退出交互界面-ctrl--p--q&#34;&gt;7 退出交互界面 （ctrl + p + q）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sudo docker ps -a 查看容器运行状态&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8-进入jupyterhub&#34;&gt;8 进入Jupyterhub
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;localhost:8000&lt;/code&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -351,8 +559,7 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         <guid>https://guohuimin.top/p/2020/</guid>
         <description>&lt;img src="https://guohuimin.top/p/2020/campus.jpg" alt="Featured image of post 2020" /&gt;&lt;p&gt;挑战 机遇 努力&lt;/p&gt;
 &lt;!-- ![NEU campus](campus.jpg) --&gt;
-&lt;p&gt;&lt;img src=&#34;campus.jpg&#34; width=&#34;700&#34; height=&#34;500&#34; alt=&#34;2020&#34; align=center /&gt;&lt;/p&gt;
-</description>
+&lt;img src=&#34;campus.jpg&#34; width=&#34;700&#34; height=&#34;500&#34; alt=&#34;2020&#34; align=center /&gt;</description>
         </item>
         <item>
         <title>power of knowledge</title>
@@ -360,19 +567,19 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         <pubDate>Sat, 05 Jan 2019 01:23:07 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/power-of-knowledge/</guid>
-        <description>&lt;h1 id=&#34;回顾&#34;&gt;回顾&lt;/h1&gt;
-&lt;p&gt;不知不觉2019年都来了，之前一直想记录下，奈何自己实在是太忙（懒），趁着晚上还有精神更新一波。&lt;/p&gt;
+        <description>&lt;h1 id=&#34;回顾&#34;&gt;回顾
+&lt;/h1&gt;&lt;p&gt;不知不觉2019年都来了，之前一直想记录下，奈何自己实在是太忙（懒），趁着晚上还有精神更新一波。&lt;/p&gt;
 &lt;p&gt;回顾2018年，自己经历了考研，毕业，异地以及现在忙碌的研究生生活。平时的课程上虽然做不到如鱼得水，但也是没有什么后悔，毕竟自己确实很上心地在学习了。&lt;/p&gt;
-&lt;h1 id=&#34;变化&#34;&gt;变化&lt;/h1&gt;
-&lt;p&gt;要说自己身上发生的变化，我觉得可以说这么几个吧：&lt;/p&gt;
+&lt;h1 id=&#34;变化&#34;&gt;变化
+&lt;/h1&gt;&lt;p&gt;要说自己身上发生的变化，我觉得可以说这么几个吧：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;身体：从3月份的接近190斤减肥到160多斤，算的上意志坚定地在减肥了吧（哭笑）&lt;/li&gt;
 &lt;li&gt;心态：谈不上有什么变化吧，依旧玻璃心。。需要继续成熟起来&lt;/li&gt;
 &lt;li&gt;知识：这个和标题比较切合，知识真的充满了魅力。今天晚上看了别人总结的CS231n的材料。感觉国外的课程知识体系真的好，循序渐进，特别有不断学习的动力。都在说这是个信息爆炸的时代，确实，但是信息实在是太多了，良莠不齐，能找到一份好的资料至关重要。一直来我觉得自己学习能力很差，学习东西很慢，现在想想其实很大一部时间被我安排在寻找资料身上，并且被各种资料疯狂的占用。所以这个问题亟待解决，一定要加强自己的信息寻找能力。&lt;/li&gt;
 &lt;li&gt;目标：目标这个词放在变化来讲好像有点不伦不类的，其实对自己而言再合适不过了。18年年初的目标，18年中期的目标，18年年末的目标以及新一年的目标有没有发生变化，值得自己思考。自己是一个容易受到外界干扰的人，一直想读博，但是这个目标貌似一直受到了各种现实情况的干扰。最初的想法确实是觉得博士代表着更高的平台，更好的发展空间，现在想想如果没有真的热爱，前边那些功利性的东西怎么能实现。更别说即使热爱还不一定能达到，所以还是需要不断的摸索，不断的思考意义。但是大致上，我还是意志比较坚定，目前对我来说只是需要不断沉淀，不断坚定自己的想法。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;2019&#34;&gt;2019&lt;/h1&gt;
-&lt;p&gt;不想说什么特别的愿望，毕竟我们连自己都无法掌控，只是希望能踏踏实实经营好生活，永远对生活充满激情。&lt;/p&gt;
+&lt;h1 id=&#34;2019&#34;&gt;2019
+&lt;/h1&gt;&lt;p&gt;不想说什么特别的愿望，毕竟我们连自己都无法掌控，只是希望能踏踏实实经营好生活，永远对生活充满激情。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -381,8 +588,8 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
         <pubDate>Sun, 23 Sep 2018 23:51:15 +0000</pubDate>
         
         <guid>https://guohuimin.top/p/book-plan/</guid>
-        <description>&lt;h1 id=&#34;计算机基础&#34;&gt;计算机基础：&lt;/h1&gt;
-&lt;ol&gt;
+        <description>&lt;h1 id=&#34;计算机基础&#34;&gt;计算机基础：
+&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;计算机系统&amp;mdash;《深入理解计算机系统》&lt;/li&gt;
 &lt;li&gt;算法&amp;mdash;《算法导论》&lt;/li&gt;
 &lt;li&gt;数据结构&amp;mdash;《数据结构-清华大学C》&lt;/li&gt;
@@ -393,20 +600,28 @@ export https_proxy=socks5://127.0.0.1:1080&lt;/p&gt;
 &lt;li&gt;C&amp;mdash;《The C Programming Language》&lt;/li&gt;
 &lt;li&gt;图像处理&amp;mdash;《数字图象处理》&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;数学基础&#34;&gt;数学基础：&lt;/h1&gt;
-&lt;ol&gt;
+&lt;h1 id=&#34;数学基础&#34;&gt;数学基础：
+&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;线性代数&lt;/li&gt;
 &lt;li&gt;概率论&lt;/li&gt;
 &lt;li&gt;离散数学&lt;/li&gt;
 &lt;li&gt;数值分析&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;进阶&#34;&gt;进阶：&lt;/h1&gt;
-&lt;ol&gt;
+&lt;h1 id=&#34;进阶&#34;&gt;进阶：
+&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;深度学习框架&lt;/li&gt;
 &lt;li&gt;C++&amp;mdash;《C++ Primer》&lt;/li&gt;
 &lt;li&gt;计算机网络&amp;mdash;《tip/tcp》&lt;/li&gt;
 &lt;/ol&gt;
 </description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://guohuimin.top/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/search/</guid>
+        <description></description>
         </item>
         
     </channel>

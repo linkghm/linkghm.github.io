@@ -1,42 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
-mkdir -p /opt/jupyterhub/home
-2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
-4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
-6 添加用户 useradd jupyterhub
-passwd jupyterhub
-7 退出交互界面 （ctrl &#43; p &#43; q） sudo docker ps -a 查看容器运行状态
-8 进入Jupyterhub localhost:8000'><title>Docker安装Jupyterhub</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub\nmkdir -p /opt/jupyterhub/home\n2 运行容器 1 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub 3 登陆docker 容器 docker exec -it jupyterhub bash\n4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple\n6 添加用户 useradd jupyterhub\npasswd jupyterhub\n7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态\n8 进入Jupyterhub localhost:8000\n">
+<title>Docker安装Jupyterhub</title>
 
 <link rel='canonical' href='https://guohuimin.top/p/docker-install-jupyterhub/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Docker安装Jupyterhub'>
-<meta property='og:description' content='1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
-mkdir -p /opt/jupyterhub/home
-2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
-4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
-6 添加用户 useradd jupyterhub
-passwd jupyterhub
-7 退出交互界面 （ctrl &#43; p &#43; q） sudo docker ps -a 查看容器运行状态
-8 进入Jupyterhub localhost:8000'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Docker安装Jupyterhub">
+<meta property='og:description' content="1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub\nmkdir -p /opt/jupyterhub/home\n2 运行容器 1 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub 3 登陆docker 容器 docker exec -it jupyterhub bash\n4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple\n6 添加用户 useradd jupyterhub\npasswd jupyterhub\n7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态\n8 进入Jupyterhub localhost:8000\n">
 <meta property='og:url' content='https://guohuimin.top/p/docker-install-jupyterhub/'>
 <meta property='og:site_name' content='Linkghm'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='docker' /><meta property='article:tag' content='jupyterhub' /><meta property='article:published_time' content='2020-07-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-07-13T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Docker安装Jupyterhub">
-<meta name="twitter:description" content="1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub
-mkdir -p /opt/jupyterhub/home
-2 运行容器 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub3 登陆docker 容器 docker exec -it jupyterhub bash
-4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
-6 添加用户 useradd jupyterhub
-passwd jupyterhub
-7 退出交互界面 （ctrl &#43; p &#43; q） sudo docker ps -a 查看容器运行状态
-8 进入Jupyterhub localhost:8000">
-    <link rel="shortcut icon" href="static/favicon.svg" />
-
+<meta name="twitter:description" content="1 新建volume映射文件夹 mkdir -p /opt/jupyterhub/jupyterhub\nmkdir -p /opt/jupyterhub/home\n2 运行容器 1 docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub 3 登陆docker 容器 docker exec -it jupyterhub bash\n4 安装notebook pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple\n6 添加用户 useradd jupyterhub\npasswd jupyterhub\n7 退出交互界面 （ctrl + p + q） sudo docker ps -a 查看容器运行状态\n8 进入Jupyterhub localhost:8000\n">
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -53,67 +33,75 @@ passwd jupyterhub
         if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
 
-            document.body.dataset.scheme = 'dark';
+            document.documentElement.dataset.scheme = 'dark';
         } else {
-            document.body.dataset.scheme = 'light';
+            document.documentElement.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
+            
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/me_hu5f3449ec5d7be9506f961545915a5b2a_124253_300x0_resize_q75_box.jpg" width="300"
-                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/me_hu10152272165814587151.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
-                    <span class="emoji">🥱</span>
+                    <span class="emoji">☕</span>
                 
             </figure>
-        
-        <h1 class="site-name"><a href="https://guohuimin.top/">Linkghm</a></h1>
-        <h2 class="site-description">Keep studying ...</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
+            
         
         
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linkghm</a></h1>
+            <h2 class="site-description">Keep studying ...</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/linkghm'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                
-                <span>Home</span>
-            </a>
-        </li>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
-
+        
         <li >
-            <a href='/about'>
+            <a href='/about/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -129,9 +117,10 @@ passwd jupyterhub
         </li>
         
         
-
         <li >
-            <a href='/archives'>
+            <a href='/archives/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -148,9 +137,10 @@ passwd jupyterhub
         </li>
         
         
-
         <li >
-            <a href='/search'>
+            <a href='/search/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -165,10 +155,12 @@ passwd jupyterhub
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -176,7 +168,7 @@ passwd jupyterhub
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -184,26 +176,58 @@ passwd jupyterhub
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://guohuimin.top/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
 </svg>
 
 
 
-            <span>Back</span>
-        </a>
-    </div>
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-新建volume映射文件夹">1 新建volume映射文件夹</a></li>
+        <li><a href="#2-运行容器">2 运行容器</a></li>
+        <li><a href="#3-登陆docker-容器">3 登陆docker 容器</a></li>
+        <li><a href="#4-安装notebook">4 安装notebook</a></li>
+        <li><a href="#6-添加用户">6 添加用户</a></li>
+        <li><a href="#7-退出交互界面-ctrl--p--q">7 退出交互界面 （ctrl + p + q）</a></li>
+        <li><a href="#8-进入jupyterhub">8 进入Jupyterhub</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
 
@@ -212,18 +236,43 @@ passwd jupyterhub
     <header class="article-category">
         
             <a href="/categories/study/" >
-                study
+                Study
             </a>
         
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/docker-install-jupyterhub/">Docker安装Jupyterhub</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/docker-install-jupyterhub/">Docker安装Jupyterhub</a>
+        </h2>
+    
+        
+    </div>
 
+    
+    
+    
+    
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 13, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -231,27 +280,45 @@ passwd jupyterhub
 
 
 
-        <time class="article-time--published">Jul 13, 2020</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
 </header>
 
     <section class="article-content">
-    <h3 id="1-新建volume映射文件夹">1 新建volume映射文件夹</h3>
-<p><code>mkdir -p /opt/jupyterhub/jupyterhub</code></p>
+    
+    
+    <h3 id="1-新建volume映射文件夹">1 新建volume映射文件夹
+</h3><p><code>mkdir -p /opt/jupyterhub/jupyterhub</code></p>
 <p><code>mkdir -p /opt/jupyterhub/home</code></p>
-<h3 id="2-运行容器">2 运行容器</h3>
-<pre><code>docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub
-</code></pre><h3 id="3-登陆docker-容器">3 登陆docker 容器</h3>
-<p><code>docker exec -it jupyterhub bash</code></p>
-<h3 id="4-安装notebook">4 安装notebook</h3>
-<p><code>pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
-<h3 id="6-添加用户">6 添加用户</h3>
-<p><code>useradd jupyterhub</code></p>
+<h3 id="2-运行容器">2 运行容器
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -p 8000:8000 -d --name jupyterhub -v /opt/jupyterhub/jupyterhub:/srv/jupyterhub -v /opt/jupyterhub/home:/home --restart=always jupyterhub/jupyterhub jupyterhub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-登陆docker-容器">3 登陆docker 容器
+</h3><p><code>docker exec -it jupyterhub bash</code></p>
+<h3 id="4-安装notebook">4 安装notebook
+</h3><p><code>pip install notebook --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+<h3 id="6-添加用户">6 添加用户
+</h3><p><code>useradd jupyterhub</code></p>
 <p><code>passwd jupyterhub</code></p>
-<h3 id="7-退出交互界面-ctrl--p--q">7 退出交互界面 （ctrl + p + q）</h3>
-<p><code>sudo docker ps -a 查看容器运行状态</code></p>
-<h3 id="8-进入jupyterhub">8 进入Jupyterhub</h3>
-<p><code>localhost:8000</code></p>
+<h3 id="7-退出交互界面-ctrl--p--q">7 退出交互界面 （ctrl + p + q）
+</h3><p><code>sudo docker ps -a 查看容器运行状态</code></p>
+<h3 id="8-进入jupyterhub">8 进入Jupyterhub
+</h3><p><code>localhost:8000</code></p>
 
 </section>
 
@@ -260,9 +327,9 @@ passwd jupyterhub
     
     <section class="article-tags">
         
-            <a href="/tags/docker/">docker</a>
+            <a href="/tags/docker/">Docker</a>
         
-            <a href="/tags/jupyterhub/">jupyterhub</a>
+            <a href="/tags/jupyterhub/">Jupyterhub</a>
         
     </section>
 
@@ -281,17 +348,20 @@ passwd jupyterhub
     </section>
     </footer>
 
+
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="">
     <a href="/p/vscode-with-docker/">
         
@@ -302,8 +372,9 @@ passwd jupyterhub
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/conda-with-linux/">
         
@@ -314,8 +385,9 @@ passwd jupyterhub
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/find-pi-without-monitor/">
         
@@ -326,8 +398,9 @@ passwd jupyterhub
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/deepin-wechat-sending-images-problem/">
         
@@ -338,8 +411,9 @@ passwd jupyterhub
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/archlinux-electron-ssr/">
         
@@ -350,13 +424,13 @@ passwd jupyterhub
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
-
+     
     
         
     <div id="gitalk-container"></div>
@@ -375,6 +449,7 @@ passwd jupyterhub
         admin: ["linkghm"],
         distractionFreeMode: false, 
         id: md5(location.pathname), 
+        proxy: null ,
     });
     (function () {
         if (
@@ -389,6 +464,7 @@ passwd jupyterhub
 </script>
 
 
+
     
 
     <footer class="site-footer">
@@ -397,14 +473,17 @@ passwd jupyterhub
         
             2018 - 
         
-        2022 Linkghm
+        2025 Linkghm
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -468,26 +547,27 @@ passwd jupyterhub
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
+
             </main>
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

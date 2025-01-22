@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
-2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard&#43;clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
-sudo vim /etc/vimrc
-在最下边加入
-set clipboard=unnamedplus
-关于unnamed和unnamedplus，可以参考 StackOverFlow
-2.4 &#43;寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，&#43;y就可以复制到&#43;寄存器。 输入:reg可以看到复制下来的内容。'><title>Vim复制粘贴到寄存器</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1 首先确认自己使用的vim版本： 1 2 3 vim --version | grep clipboard -clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。\n2 解决办法： 2.1 安装gvim 1 2 yay -R vim # 卸载原始的vim yay -S gvim # 安装gvim 2.2 检查vim版本信息 1 2 3 vim --version | grep clipboard +clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。\nsudo vim /etc/vimrc\n在最下边加入\nset clipboard=unnamedplus\n关于unnamed和unnamedplus，可以参考 StackOverFlow\n">
+<title>Vim复制粘贴到寄存器</title>
 
 <link rel='canonical' href='https://guohuimin.top/p/vim-clipboard-problem/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vim复制粘贴到寄存器'>
-<meta property='og:description' content='1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
-2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard&#43;clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
-sudo vim /etc/vimrc
-在最下边加入
-set clipboard=unnamedplus
-关于unnamed和unnamedplus，可以参考 StackOverFlow
-2.4 &#43;寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，&#43;y就可以复制到&#43;寄存器。 输入:reg可以看到复制下来的内容。'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Vim复制粘贴到寄存器">
+<meta property='og:description' content="1 首先确认自己使用的vim版本： 1 2 3 vim --version | grep clipboard -clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。\n2 解决办法： 2.1 安装gvim 1 2 yay -R vim # 卸载原始的vim yay -S gvim # 安装gvim 2.2 检查vim版本信息 1 2 3 vim --version | grep clipboard +clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。\nsudo vim /etc/vimrc\n在最下边加入\nset clipboard=unnamedplus\n关于unnamed和unnamedplus，可以参考 StackOverFlow\n">
 <meta property='og:url' content='https://guohuimin.top/p/vim-clipboard-problem/'>
 <meta property='og:site_name' content='Linkghm'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vim' /><meta property='article:published_time' content='2020-07-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-07-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Vim复制粘贴到寄存器">
-<meta name="twitter:description" content="1 首先确认自己使用的vim版本： vim --version | grep clipboard-clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。
-2 解决办法： 2.1 安装gvim yay -R vim # 卸载原始的vimyay -S gvim # 安装gvim2.2 检查vim版本信息 vim --version | grep clipboard&#43;clipboard &#43;jumplist &#43;popupwin &#43;user_commands&#43;ex_extra -mouse_jsbterm -sun_workshop &#43;xterm_clipboard2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。
-sudo vim /etc/vimrc
-在最下边加入
-set clipboard=unnamedplus
-关于unnamed和unnamedplus，可以参考 StackOverFlow
-2.4 &#43;寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，&#43;y就可以复制到&#43;寄存器。 输入:reg可以看到复制下来的内容。">
-    <link rel="shortcut icon" href="static/favicon.svg" />
-
+<meta name="twitter:description" content="1 首先确认自己使用的vim版本： 1 2 3 vim --version | grep clipboard -clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。\n2 解决办法： 2.1 安装gvim 1 2 yay -R vim # 卸载原始的vim yay -S gvim # 安装gvim 2.2 检查vim版本信息 1 2 3 vim --version | grep clipboard +clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。\nsudo vim /etc/vimrc\n在最下边加入\nset clipboard=unnamedplus\n关于unnamed和unnamedplus，可以参考 StackOverFlow\n">
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -50,67 +33,75 @@ set clipboard=unnamedplus
         if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
 
-            document.body.dataset.scheme = 'dark';
+            document.documentElement.dataset.scheme = 'dark';
         } else {
-            document.body.dataset.scheme = 'light';
+            document.documentElement.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
+            
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/me_hu5f3449ec5d7be9506f961545915a5b2a_124253_300x0_resize_q75_box.jpg" width="300"
-                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/me_hu10152272165814587151.jpg" width="300"
+                            height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
-                    <span class="emoji">🥱</span>
+                    <span class="emoji">☕</span>
                 
             </figure>
-        
-        <h1 class="site-name"><a href="https://guohuimin.top/">Linkghm</a></h1>
-        <h2 class="site-description">Keep studying ...</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
+            
         
         
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linkghm</a></h1>
+            <h2 class="site-description">Keep studying ...</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/linkghm'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                
-                <span>Home</span>
-            </a>
-        </li>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
-
+        
         <li >
-            <a href='/about'>
+            <a href='/about/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -126,9 +117,10 @@ set clipboard=unnamedplus
         </li>
         
         
-
         <li >
-            <a href='/archives'>
+            <a href='/archives/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -145,9 +137,10 @@ set clipboard=unnamedplus
         </li>
         
         
-
         <li >
-            <a href='/search'>
+            <a href='/search/' >
+                
+                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -162,10 +155,12 @@ set clipboard=unnamedplus
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -173,7 +168,7 @@ set clipboard=unnamedplus
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -181,26 +176,60 @@ set clipboard=unnamedplus
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://guohuimin.top/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
 </svg>
 
 
 
-            <span>Back</span>
-        </a>
-    </div>
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-首先确认自己使用的vim版本">1 首先确认自己使用的vim版本：</a></li>
+        <li><a href="#2-解决办法">2 解决办法：</a>
+          <ol>
+            <li><a href="#21-安装gvim">2.1 安装gvim</a></li>
+            <li><a href="#22-检查vim版本信息">2.2 检查vim版本信息</a></li>
+            <li><a href="#23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim">2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：</a></li>
+            <li><a href="#24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器">2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
 
@@ -209,18 +238,43 @@ set clipboard=unnamedplus
     <header class="article-category">
         
             <a href="/categories/study/" >
-                study
+                Study
             </a>
         
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/vim-clipboard-problem/">Vim复制粘贴到寄存器</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vim-clipboard-problem/">Vim复制粘贴到寄存器</a>
+        </h2>
+    
+        
+    </div>
 
+    
+    
+    
+    
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 27, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -228,32 +282,69 @@ set clipboard=unnamedplus
 
 
 
-        <time class="article-time--published">Jul 27, 2020</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
 </header>
 
     <section class="article-content">
-    <h3 id="1-首先确认自己使用的vim版本">1 首先确认自己使用的vim版本：</h3>
-<pre><code>vim --version | grep clipboard
--clipboard         +jumplist          +popupwin          +user_commands
-+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
-</code></pre><p>如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。</p>
-<h3 id="2-解决办法">2 解决办法：</h3>
-<h4 id="21-安装gvim">2.1 安装gvim</h4>
-<pre><code>yay -R vim # 卸载原始的vim
-yay -S gvim # 安装gvim
-</code></pre><h4 id="22-检查vim版本信息">2.2 检查vim版本信息</h4>
-<pre><code>vim --version | grep clipboard
-+clipboard         +jumplist          +popupwin          +user_commands
-+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
-</code></pre><h4 id="23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim">2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：</h4>
-<p>这里是直接对vim的全局配置进行更改，个人用户更改请Google。</p>
+    
+    
+    <h3 id="1-首先确认自己使用的vim版本">1 首先确认自己使用的vim版本：
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim --version | grep clipboard
+</span></span><span class="line"><span class="cl">-clipboard         +jumplist          +popupwin          +user_commands
+</span></span><span class="line"><span class="cl">+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。</p>
+<h3 id="2-解决办法">2 解决办法：
+</h3><h4 id="21-安装gvim">2.1 安装gvim
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yay -R vim # 卸载原始的vim
+</span></span><span class="line"><span class="cl">yay -S gvim # 安装gvim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="22-检查vim版本信息">2.2 检查vim版本信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim --version | grep clipboard
+</span></span><span class="line"><span class="cl">+clipboard         +jumplist          +popupwin          +user_commands
+</span></span><span class="line"><span class="cl">+ex_extra          -mouse_jsbterm     -sun_workshop      +xterm_clipboard
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="23-个人是在做完以上的步骤后还是出现不能复制粘贴的问题因此需要进一步配置vim">2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim：
+</h4><p>这里是直接对vim的全局配置进行更改，个人用户更改请Google。</p>
 <p><code>sudo vim /etc/vimrc</code></p>
 <p>在最下边加入</p>
 <p><code>set clipboard=unnamedplus</code></p>
 <p>关于unnamed和unnamedplus，可以参考 StackOverFlow</p>
-<h4 id="24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器">2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。</h4>
-<p>输入:reg可以看到复制下来的内容。</p>
+<h4 id="24-寄存器是和系统剪贴板关联的寄存器我们选择要复制的文本后y就可以复制到寄存器">2.4 +寄存器是和系统剪贴板关联的寄存器，我们选择要复制的文本后，+y就可以复制到+寄存器。
+</h4><p>输入:reg可以看到复制下来的内容。</p>
 
 </section>
 
@@ -262,7 +353,7 @@ yay -S gvim # 安装gvim
     
     <section class="article-tags">
         
-            <a href="/tags/vim/">vim</a>
+            <a href="/tags/vim/">Vim</a>
         
     </section>
 
@@ -281,17 +372,20 @@ yay -S gvim # 安装gvim
     </section>
     </footer>
 
+
     
 </article>
 
-    <aside class="related-contents--wrapper">
     
+
     
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="">
     <a href="/p/conda-with-linux/">
         
@@ -302,8 +396,9 @@ yay -S gvim # 安装gvim
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/vscode-with-docker/">
         
@@ -314,8 +409,9 @@ yay -S gvim # 安装gvim
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/find-pi-without-monitor/">
         
@@ -326,8 +422,9 @@ yay -S gvim # 安装gvim
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/deepin-wechat-sending-images-problem/">
         
@@ -338,8 +435,9 @@ yay -S gvim # 安装gvim
         </div>
     </a>
 </article>
+
+            
                 
-                    
 <article class="">
     <a href="/p/archlinux-electron-ssr/">
         
@@ -350,13 +448,13 @@ yay -S gvim # 安装gvim
         </div>
     </a>
 </article>
-                
-            </div>
+
+            
         </div>
-    
+    </div>
 </aside>
 
-
+     
     
         
     <div id="gitalk-container"></div>
@@ -375,6 +473,7 @@ yay -S gvim # 安装gvim
         admin: ["linkghm"],
         distractionFreeMode: false, 
         id: md5(location.pathname), 
+        proxy: null ,
     });
     (function () {
         if (
@@ -389,6 +488,7 @@ yay -S gvim # 安装gvim
 </script>
 
 
+
     
 
     <footer class="site-footer">
@@ -397,14 +497,17 @@ yay -S gvim # 安装gvim
         
             2018 - 
         
-        2022 Linkghm
+        2025 Linkghm
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -468,26 +571,27 @@ yay -S gvim # 安装gvim
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
+
             </main>
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

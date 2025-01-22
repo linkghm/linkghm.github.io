@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>PI on Linkghm</title>
-    <link>https://guohuimin.top/tags/pi/</link>
-    <description>Recent content in PI on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/pi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Find pi without the monitor</title>
-      <link>https://guohuimin.top/p/find-pi-without-monitor/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/p/find-pi-without-monitor/</guid>
-      <description>本文仅作个人记录，如有不同请Google。
-前提：树莓派安装在局域网内
-1 安装nmap yay -S nmap
-2 查看当前主机的ip ip addr
-3 得到局域网的ip网段 e.g. 192.168.X.X
-4 使用nmap找到树莓派 nmap -sP 192.168.X.0/22
-5 ssh连接树莓派（我的名字是ubuntu） ssh ubuntu@192.168.X.Y</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>PI on Linkghm</title>
+        <link>https://guohuimin.top/tags/pi/</link>
+        <description>Recent content in PI on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/pi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Find pi without the monitor</title>
+        <link>https://guohuimin.top/p/find-pi-without-monitor/</link>
+        <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/p/find-pi-without-monitor/</guid>
+        <description>&lt;p&gt;本文仅作个人记录，如有不同请Google。&lt;/p&gt;
+&lt;p&gt;前提：树莓派安装在局域网内&lt;/p&gt;
+&lt;h3 id=&#34;1-安装nmap&#34;&gt;1 安装nmap
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;yay -S nmap&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-查看当前主机的ip&#34;&gt;2 查看当前主机的ip
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ip addr&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-得到局域网的ip网段&#34;&gt;3 得到局域网的ip网段
+&lt;/h3&gt;&lt;p&gt;e.g. 192.168.X.X&lt;/p&gt;
+&lt;h3 id=&#34;4-使用nmap找到树莓派&#34;&gt;4 使用nmap找到树莓派
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;nmap -sP 192.168.X.0/22&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-ssh连接树莓派我的名字是ubuntu&#34;&gt;5 ssh连接树莓派（我的名字是ubuntu）
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ssh ubuntu@192.168.X.Y&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

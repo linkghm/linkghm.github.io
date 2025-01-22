@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Pages on Linkghm</title>
-    <link>https://guohuimin.top/page/</link>
-    <description>Recent content in Pages on Linkghm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/page/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Archives</title>
-      <link>https://guohuimin.top/archives/</link>
-      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://guohuimin.top/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/about/</guid>
-      <description>Me A PhD student major in Biomedical Engineering.
-Github: https://github.com/linkghm
-Email：linkghm@outlook.com
-Areas of interest Computer Vision, Medical Image Processing, Deep Learning</description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>https://guohuimin.top/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://guohuimin.top/search/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Pages on Linkghm</title>
+        <link>https://guohuimin.top/page/</link>
+        <description>Recent content in Pages on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Archives</title>
+        <link>https://guohuimin.top/archives/</link>
+        <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>About</title>
+        <link>https://guohuimin.top/about/</link>
+        <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/about/</guid>
+        <description>&lt;h2 id=&#34;me&#34;&gt;Me
+&lt;/h2&gt;&lt;p&gt;A PhD student major in Biomedical Engineering.&lt;/p&gt;
+&lt;p&gt;Github: &lt;a class=&#34;link&#34; href=&#34;https://github.com/linkghm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/linkghm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Email：&lt;a class=&#34;link&#34; href=&#34;mailto:linkghm@outlook.com&#34; &gt;linkghm@outlook.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;areas-of-interest&#34;&gt;Areas of interest
+&lt;/h2&gt;&lt;p&gt;Computer Vision, Medical Image Processing, Deep Learning&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://guohuimin.top/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://guohuimin.top/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>
