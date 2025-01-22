@@ -1,178 +1,113 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://guohuimin.top/p/conda-with-linux/</loc>
+    <loc>http://localhost:1313/categories/-study/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/conda-with-linux/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/linux/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/post/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/categories/study/</loc>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/archives/</loc>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/page/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/2021/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/-life/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/categories/life/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/2021/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/life/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/life/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/docker/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/vscode/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/vscode/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/vscode-with-docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/vscode-with-docker/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/find-pi-without-monitor/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/find-pi-without-monitor/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/pi/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/pi/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/arch/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/arch/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/deepin-wechat-sending-images-problem/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/archlinux-electron-ssr/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/archlinux-electron-ssr/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/vim/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/vim/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/vim-clipboard-problem/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/vim-clipboard-problem/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/frp/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/frp/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/frp/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/frp/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/git/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/git-push-cancel-password/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/git-push-cancel-password/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/linux-proxy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/linux-proxy/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/docker-install-jupyterhub/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/docker-install-jupyterhub/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/jupyterhub/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/jupyterhub/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/2020/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/2020/</loc>
     <lastmod>2020-03-03T14:32:36+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/power-of-knowledge/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/life/</loc>
     <lastmod>2019-01-05T01:23:07+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/tags/books/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/power-of-knowledge/</loc>
+    <lastmod>2019-01-05T01:23:07+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/books/</loc>
     <lastmod>2018-09-23T23:51:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/p/book-plan/</loc>
+  </url><url>
+    <loc>http://localhost:1313/p/book-plan/</loc>
     <lastmod>2018-09-23T23:51:15+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/study/</loc>
   </url>
-  
-  <url>
-    <loc>https://guohuimin.top/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://guohuimin.top/search/</loc>
-  </url>
-  
 </urlset>
