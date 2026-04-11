@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。\n1 2 /usr/bin/electron-ssr electron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory 个人当前的系统信息如下：\nLinux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux\n2 原因分析： cat /usr/bin/electron-ssr\n1 2 #!/bin/bash exec electron4 /usr/share/electron-ssr/app.asar &#34;$@&#34; 可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。\n3 具体解决办法： sudo vim /usr/bin/electron-ssr\n1 2 #!/bin/bash exec electron4 /usr/share/electron-ssr/app.asar &#34;$@&#34; 更改为\n1 2 #!/bin/bash exec electron /usr/share/electron-ssr/app.asar &#34;$@&#34; 4 重新启动即可 ">
 <title>ArchLinux下Electron-ssr启动问题</title>
 
 <link rel='canonical' href='https://guohuimin.top/p/archlinux-electron-ssr/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="ArchLinux下Electron-ssr启动问题">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="ArchLinux下Electron-ssr启动问题">
 <meta property='og:description' content="1 问题再现： 最近发现electron-ssr不能启动了，经过查找是软件依赖的electron版本出现问题。\n1 2 /usr/bin/electron-ssr electron4: error while loading shared libraries: libre2.so.7: cannot open shared object file: No such file or directory 个人当前的系统信息如下：\nLinux ghmarch 5.7.10-arch1-1 #1 SMP PREEMPT Wed, 22 Jul 2020 19:57:42 +0000 x86_64 GNU/Linux\n2 原因分析： cat /usr/bin/electron-ssr\n1 2 #!/bin/bash exec electron4 /usr/share/electron-ssr/app.asar &#34;$@&#34; 可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。\n3 具体解决办法： sudo vim /usr/bin/electron-ssr\n1 2 #!/bin/bash exec electron4 /usr/share/electron-ssr/app.asar &#34;$@&#34; 更改为\n1 2 #!/bin/bash exec electron /usr/share/electron-ssr/app.asar &#34;$@&#34; 4 重新启动即可 ">
 <meta property='og:url' content='https://guohuimin.top/p/archlinux-electron-ssr/'>
 <meta property='og:site_name' content='Linkghm'>
@@ -56,7 +56,7 @@
                     
                     
                         
-                        <img src="/img/me_hu_70b7d63334038a83.jpg" width="300"
+                        <img src="/img/me_hu_afa3952322e3a8a5.jpg" width="300"
                             height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -316,7 +316,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">exec</span> electron4 /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">exec</span> electron4 /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以看到electron-ssr使用的是electron4，应该是electron更新后将libre2.so相关的库也进行了更新。但是这个项目已经被作者废弃了，所以需要我们自己更新启动脚本。</p>
@@ -329,7 +329,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">exec</span> electron4 /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">exec</span> electron4 /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>更改为</p>
@@ -340,7 +340,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">exec</span> electron /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nb">exec</span> electron /usr/share/electron-ssr/app.asar <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="4-重新启动即可">4 重新启动即可
@@ -414,19 +414,6 @@
             
                 
 <article class="">
-    <a href="/p/linux-proxy/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Linux终端代理</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
     <a href="/p/frp/">
         
         
@@ -446,6 +433,19 @@
 
         <div class="article-details">
             <h2 class="article-title">vscode &#43; docker in the local environment</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/find-pi-without-monitor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find pi without the monitor</h2>
         </div>
     </a>
 </article>
@@ -498,7 +498,7 @@
         
             2018 - 
         
-        2025 Linkghm
+        2026 Linkghm
     </section>
     
     <section class="powerby">

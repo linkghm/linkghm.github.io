@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1 首先确认自己使用的vim版本： 1 2 3 vim --version | grep clipboard -clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。\n2 解决办法： 2.1 安装gvim 1 2 yay -R vim # 卸载原始的vim yay -S gvim # 安装gvim 2.2 检查vim版本信息 1 2 3 vim --version | grep clipboard +clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。\nsudo vim /etc/vimrc\n在最下边加入\nset clipboard=unnamedplus\n关于unnamed和unnamedplus，可以参考 StackOverFlow\n">
 <title>Vim复制粘贴到寄存器</title>
 
 <link rel='canonical' href='https://guohuimin.top/p/vim-clipboard-problem/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Vim复制粘贴到寄存器">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="Vim复制粘贴到寄存器">
 <meta property='og:description' content="1 首先确认自己使用的vim版本： 1 2 3 vim --version | grep clipboard -clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 如果在clipboard前边出现了-，表示当前的vim不支持复制粘贴到系统剪贴板，也就是说不可以将文本里边的内容直接粘贴出来。\n2 解决办法： 2.1 安装gvim 1 2 yay -R vim # 卸载原始的vim yay -S gvim # 安装gvim 2.2 检查vim版本信息 1 2 3 vim --version | grep clipboard +clipboard +jumplist +popupwin +user_commands +ex_extra -mouse_jsbterm -sun_workshop +xterm_clipboard 2.3× 个人是在做完以上的步骤后，还是出现不能复制粘贴的问题，因此需要进一步配置vim： 这里是直接对vim的全局配置进行更改，个人用户更改请Google。\nsudo vim /etc/vimrc\n在最下边加入\nset clipboard=unnamedplus\n关于unnamed和unnamedplus，可以参考 StackOverFlow\n">
 <meta property='og:url' content='https://guohuimin.top/p/vim-clipboard-problem/'>
 <meta property='og:site_name' content='Linkghm'>
@@ -56,7 +56,7 @@
                     
                     
                         
-                        <img src="/img/me_hu_70b7d63334038a83.jpg" width="300"
+                        <img src="/img/me_hu_afa3952322e3a8a5.jpg" width="300"
                             height="169" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -439,12 +439,12 @@
             
                 
 <article class="">
-    <a href="/p/archlinux-electron-ssr/">
+    <a href="/p/frp/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">ArchLinux下Electron-ssr启动问题</h2>
+            <h2 class="article-title">frp的使用</h2>
         </div>
     </a>
 </article>
@@ -497,7 +497,7 @@
         
             2018 - 
         
-        2025 Linkghm
+        2026 Linkghm
     </section>
     
     <section class="powerby">
