@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Jupyterhub on Linkghm</title>
-        <link>https://guohuimin.top/tags/jupyterhub/</link>
+        <link>http://localhost:1313/tags/jupyterhub/</link>
         <description>Recent content in Jupyterhub on Linkghm</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/jupyterhub/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/jupyterhub/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Docker安装Jupyterhub</title>
-        <link>https://guohuimin.top/p/docker-install-jupyterhub/</link>
+        <link>http://localhost:1313/p/docker-install-jupyterhub/</link>
         <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://guohuimin.top/p/docker-install-jupyterhub/</guid>
+        <guid>http://localhost:1313/p/docker-install-jupyterhub/</guid>
         <description>&lt;h3 id=&#34;1-新建volume映射文件夹&#34;&gt;1 新建volume映射文件夹
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/jupyterhub&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir -p /opt/jupyterhub/home&lt;/code&gt;&lt;/p&gt;

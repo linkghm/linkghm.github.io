@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Git on Linkghm</title>
-        <link>https://guohuimin.top/tags/git/</link>
+        <link>http://localhost:1313/tags/git/</link>
         <description>Recent content in Git on Linkghm</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>git push取消密码</title>
-        <link>https://guohuimin.top/p/git-push-cancel-password/</link>
+        <link>http://localhost:1313/p/git-push-cancel-password/</link>
         <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://guohuimin.top/p/git-push-cancel-password/</guid>
+        <guid>http://localhost:1313/p/git-push-cancel-password/</guid>
         <description>&lt;p&gt;在进行git push的时候，总是会提示输入github帐号和密码。&lt;/p&gt;
 &lt;p&gt;原因是在github创建repo后，本地工程上传到github使用的是https协议，因此会有上述的问题。&lt;/p&gt;
 &lt;p&gt;具体解决办法：&lt;/p&gt;

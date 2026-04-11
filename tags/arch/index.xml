@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>arch on Linkghm</title>
-        <link>https://guohuimin.top/tags/arch/</link>
+        <link>http://localhost:1313/tags/arch/</link>
         <description>Recent content in arch on Linkghm</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://guohuimin.top/tags/arch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/arch/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Deepin-wechat无法发送图</title>
-        <link>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</link>
+        <link>http://localhost:1313/p/deepin-wechat-sending-images-problem/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://guohuimin.top/p/deepin-wechat-sending-images-problem/</guid>
+        <guid>http://localhost:1313/p/deepin-wechat-sending-images-problem/</guid>
         <description>&lt;p&gt;Github Issue：&lt;a class=&#34;link&#34; href=&#34;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/countstarlight/deepin-wine-wechat-arch/issues/42&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;具体解决办法（摘自Issue，作为个人记录）：&lt;/p&gt;
