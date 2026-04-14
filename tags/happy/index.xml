@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Happy on Linkghm</title>
+        <link>http://localhost:1313/tags/happy/</link>
+        <description>Recent content in Happy on Linkghm</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/happy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>快乐小狗</title>
+        <link>http://localhost:1313/p/happy-dog/</link>
+        <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/happy-dog/</guid>
+        <description>&lt;h2 id=&#34;校区里偶遇的小狗们-&#34;&gt;校区里偶遇的小狗们 🐶
+&lt;/h2&gt;&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;MVIMG_20260411_171303.jpg&#34; width=&#34;612&#34; height=&#34;816&#34; alt=&#34;2020&#34; /&gt;
+&lt;/div&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;MVIMG_20260411_171315.jpg&#34; width=&#34;612&#34; height=&#34;816&#34; alt=&#34;图片2&#34; /&gt;
+&lt;/div&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;MVIMG_20260411_160510.jpg&#34; width=&#34;816&#34; height=&#34;612&#34; alt=&#34;图片3&#34; /&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
